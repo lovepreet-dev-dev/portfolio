@@ -307,11 +307,14 @@ h3 {
 }
 
 .button.secondary {
+  gap: 9px;
   border-color: var(--line-strong);
   background: rgba(255, 255, 255, 0.05);
 }
 
 .button.secondary:hover { border-color: var(--accent); }
+
+.button svg { width: 17px; height: 17px; }
 
 .hero-stats {
   display: grid;
@@ -628,10 +631,40 @@ h3 {
   gap: 7px;
 }
 
-.project-tags {
+.project-tags { padding-top: 14px; }
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-top: auto;
   padding-top: 22px;
 }
+
+/* A card with no links still needs its tag row pushed to the bottom. */
+.project-body > .project-tags:last-child { margin-top: auto; padding-top: 22px; }
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 13px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.project-links a:hover {
+  color: var(--accent);
+  border-color: rgba(114, 242, 200, 0.45);
+  background: rgba(114, 242, 200, 0.08);
+}
+
+.project-links svg { width: 15px; height: 15px; }
 
 .chip-list span,
 .project-tags span {
