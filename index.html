@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Lovepreet Sharma - AI/ML engineer building agentic AI systems, retrieval platforms, federated learning research, and shipped production software."
+      content="Lovepreet Sharma - AI/ML engineer and software developer. Shipped production software, retrieval platforms, Android and desktop apps. Open to AI/ML, SDE and full-stack roles."
     >
     <meta name="theme-color" content="#070a12">
     <title>Lovepreet Sharma | AI/ML Engineer</title>
@@ -23,9 +23,9 @@
       </a>
       <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
         <a href="#work">Work</a>
-        <a href="#research">Research</a>
         <a href="#stack">Stack</a>
         <a href="#about">About</a>
+        <a href="#research">Research</a>
         <a href="#contact">Contact</a>
       </nav>
       <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
@@ -38,11 +38,11 @@
         <div class="hero-copy">
           <p class="eyebrow"><span class="pulse-dot"></span> M.Tech Data Analytics &middot; NIT Jalandhar</p>
           <h1>Lovepreet<br>Sharma</h1>
-          <p class="hero-role">I build AI systems that know when <em>not</em> to act.</p>
+          <p class="hero-role">I build software people actually <em>use</em>.</p>
           <p class="hero-text">
-            AI/ML engineer and software developer. I ship end-to-end systems &mdash; multi-agent diagnosis pipelines with
-            calibrated abstention, retrieval platforms with cited answers, federated learning experiments, and
-            conventional production software that a real business depends on every day.
+            AI/ML engineer and software developer. I take products all the way &mdash; a loan system that runs a finance
+            business offline every day, a retrieval platform that answers with citations, an Android app backed by an
+            LLM. Backend, frontend, model and installer, shipped as one working thing.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#work">View work</a>
@@ -51,14 +51,14 @@
 
           <dl class="hero-stats">
             <div>
-              <dt>Harmful automated actions</dt>
-              <dd><span class="stat-num">75.8% &rarr; 14.2%</span></dd>
-              <dd class="stat-note">Agentic routing over a 190-image evaluation</dd>
+              <dt>In production</dt>
+              <dd><span class="stat-num">Daily use</span></dd>
+              <dd class="stat-note">A finance business runs on software I built and shipped</dd>
             </div>
             <div>
-              <dt>Shift detection AUROC</dt>
-              <dd><span class="stat-num">0.981</span></dd>
-              <dd class="stat-note">Conformal prototype guard, 0% in-domain false positives</dd>
+              <dt>Built end to end</dt>
+              <dd><span class="stat-num">14 projects</span></dd>
+              <dd class="stat-note">Backend, frontend, mobile, ML and packaging</dd>
             </div>
             <div>
               <dt>GATE CS/IT qualified</dt>
@@ -71,20 +71,20 @@
         <aside class="hero-panel" aria-label="Current focus">
           <div class="signal-card">
             <span class="pulse"></span>
-            <p>Current research</p>
-            <h2>AgriShift&#8209;Sentinel</h2>
+            <p>Shipped &amp; running</p>
+            <h2>Loan Manager</h2>
             <p class="signal-sub">
-              Conformal prototype guarding for agentic plant-disease diagnosis under distribution shift &mdash;
-              catching the confident-but-wrong cases that thresholds miss.
+              A fully offline loan back-office a small finance company opens every morning &mdash; four interest
+              models, printable receipts, one-click backup, packaged as a Windows installer.
             </p>
           </div>
           <div class="model-stack">
-            <span>Agentic routing</span>
-            <span>Conformal prediction</span>
-            <span>Hybrid RAG</span>
-            <span>Federated learning</span>
-            <span>Local inference</span>
-            <span>Offline-first software</span>
+            <span>Full-stack delivery</span>
+            <span>LLM applications</span>
+            <span>RAG pipelines</span>
+            <span>Offline-first apps</span>
+            <span>Android &amp; desktop</span>
+            <span>CI/CD &amp; packaging</span>
           </div>
         </aside>
       </section>
@@ -95,8 +95,8 @@
           <p class="section-kicker">Selected work</p>
           <h2>Fourteen projects, built end to end.</h2>
           <p class="section-text">
-            Everything below is code I wrote and ran. Screenshots are captured from the actual running
-            applications and from the real evaluation output of the research pipelines &mdash; not mockups.
+            Shipped products first, research further down. Everything here is code I wrote and ran, and every
+            screenshot is captured from the application actually running &mdash; not a mockup.
           </p>
         </div>
 
@@ -110,42 +110,7 @@
 
         <div class="project-grid" id="projectGrid">
 
-          <!-- 1. AgriShift-Sentinel -->
-          <article class="project-card is-wide" data-cat="research systems">
-            <figure class="shot shot--fit">
-              <img
-                src="assets/shots/agentic-eval.webp"
-                alt="Two evaluation plots: prototype nonconformity score separating in-domain from out-of-domain images at AUROC 0.981, and a safety-coverage bar chart showing harmful actions dropping from 23.7% to 10.6%."
-                width="1200" height="480" loading="lazy" decoding="async"
-              >
-              <figcaption>Real evaluation output &mdash; shift separation and the safety/coverage trade-off</figcaption>
-            </figure>
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="tag-role">Agentic AI &middot; Research</span>
-                <span class="tag-year">Flagship</span>
-              </div>
-              <h3>AgriShift-Sentinel &mdash; agentic plant disease diagnosis</h3>
-              <p>
-                An agentic layer wrapped around a 38-class PlantVillage ResNet-18 ensemble. A vision agent, a
-                confidence/quality agent and an orchestrator implement three-tier routing: answer directly, retrieve
-                and reason, or escalate to a human expert. A conformal prototype &ldquo;Shift Sentinel&rdquo; runs
-                <em>before</em> the healthy shortcut, because a low-confidence &ldquo;healthy&rdquo; prediction can be
-                a missed disease.
-              </p>
-              <ul class="metric-list">
-                <li><strong>75.8% &rarr; 14.2%</strong> harmful-action rate vs the always-trust-the-model baseline</li>
-                <li><strong>AUROC 0.981</strong> separating held-out in-domain from web out-of-domain images, at 0% in-domain false positives</li>
-                <li><strong>Grounded answers</strong> &mdash; bge-small + FAISS retrieval over an agronomy corpus, so treatment advice cites sources instead of hallucinating</li>
-                <li><strong>Image-quality gating</strong> (Laplacian blur + brightness) and 3-model ensemble disagreement catch confident misclassifications thresholding alone missed</li>
-              </ul>
-              <div class="project-tags">
-                <span>PyTorch</span><span>Multi-agent</span><span>Conformal prediction</span><span>FAISS</span><span>LLM routing</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 2. Loan Manager -->
+          <!-- 1. Loan Manager -->
           <article class="project-card is-wide" data-cat="product">
             <figure class="shot shot-duo">
               <img
@@ -183,7 +148,7 @@
             </div>
           </article>
 
-          <!-- 3. RAG Engine -->
+          <!-- 2. RAG Engine -->
           <article class="project-card" data-cat="systems">
             <figure class="shot shot--fit">
               <img
@@ -214,7 +179,258 @@
             </div>
           </article>
 
-          <!-- 4. CASSIA -->
+          <!-- 3. Loan Manager Cloud Sync Suite -->
+          <article class="project-card is-text" data-cat="product systems">
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Distributed system</span>
+                <span class="tag-year">Offline-first</span>
+              </div>
+              <h3>Loan Manager Cloud Sync Suite</h3>
+              <p>
+                Three applications sharing one dataset through a cloud sync hub: a Flutter Android app for field
+                agents, the Node desktop back-office, and a FastAPI hub in the middle. Both clients hold their own
+                SQLite database and work with no network at all.
+              </p>
+              <ul class="metric-list">
+                <li><strong>Explicit, conflict-aware sync</strong> &mdash; UUID identity with last-write-wins reconciliation through a single <code>POST /api/sync</code> endpoint</li>
+                <li>Multi-tenant hub with company registration and JWT auth</li>
+                <li>Android app covers customers, loans with live EMI preview, receipts, register filters and a collections dashboard</li>
+              </ul>
+              <div class="project-tags">
+                <span>Flutter</span><span>FastAPI</span><span>SQLAlchemy</span><span>sqflite</span><span>JWT</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. PlanRemind -->
+          <article class="project-card is-text" data-cat="product systems">
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Android app</span>
+                <span class="tag-year">LLM-backed</span>
+              </div>
+              <h3>PlanRemind &mdash; AI study planner</h3>
+              <p>
+                An offline-first Jetpack Compose app that turns a student profile and syllabus into a structured study
+                plan, with Room as the single source of truth so the app stays useful without a network.
+              </p>
+              <ul class="metric-list">
+                <li><strong>Keys never touch the client</strong> &mdash; a Supabase Edge Function proxies OpenRouter, validates the JSON response and enforces timeouts</li>
+                <li>Clean MVVM with a <code>Resource&lt;T&gt;</code> result pattern; Room emits via Flow so the UI updates itself</li>
+                <li>Material 3 UI with reminders, calendar progress and statistics</li>
+              </ul>
+              <div class="project-tags">
+                <span>Kotlin</span><span>Jetpack Compose</span><span>Room</span><span>Supabase</span><span>OpenRouter</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Crowd Voice -->
+          <article class="project-card" data-cat="tools systems">
+            <figure class="shot">
+              <img
+                src="assets/shots/crowdvoice.webp"
+                alt="Crowd Voice dashboard: a diverging voter sentiment bar chart, a predicted election standings panel ranking three parties, and a Pulse of the Crowd feed of classified social posts."
+                width="1200" height="833" loading="lazy" decoding="async"
+              >
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">NLP dashboard</span>
+                <span class="tag-year">FastAPI</span>
+              </div>
+              <h3>Crowd Voice &mdash; election sentiment predictor</h3>
+              <p>
+                A sentiment pipeline that ingests social and news posts, classifies them with a DistilBERT SST-2
+                transformer, and aggregates per-party net sentiment into live predicted standings.
+              </p>
+              <ul class="metric-list">
+                <li>FastAPI backend with pluggable scrapers (Reddit via PRAW, RSS via feedparser) and a mock source for offline runs</li>
+                <li>ECharts dashboard with a diverging positive/negative breakdown, ranked standings and a live post feed</li>
+              </ul>
+              <div class="project-tags">
+                <span>FastAPI</span><span>Transformers</span><span>DistilBERT</span><span>ECharts</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Machine Learning Studio -->
+          <article class="project-card" data-cat="tools">
+            <figure class="shot">
+              <img
+                src="assets/shots/mlstudio-algo.webp"
+                alt="Machine Learning Studio nearest-neighbour page with an interactive lab: k and distance-metric controls, a scatter plot of labelled points around a query point, and a live math panel."
+                width="1200" height="750" loading="lazy" decoding="async"
+              >
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Interactive learning</span>
+                <span class="tag-year">Zero dependencies</span>
+              </div>
+              <h3>Machine Learning Studio</h3>
+              <p>
+                A static, dependency-free site that teaches ML algorithms by letting you drive them. Every algorithm
+                page carries editable controls, step-by-step math with the current numbers substituted in, and a
+                logic trail explaining why each update happens.
+              </p>
+              <ul class="metric-list">
+                <li>Covers foundations, classification, graphical models and clustering through one shared page shell driven by a catalog</li>
+                <li>Plain HTML, CSS and JavaScript &mdash; no build step, no framework, hosted as static pages</li>
+              </ul>
+              <div class="project-tags">
+                <span>JavaScript</span><span>SVG</span><span>Static site</span><span>Education</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Attendance Analyzer -->
+          <article class="project-card" data-cat="tools">
+            <figure class="shot">
+              <img
+                src="assets/shots/attendance.webp"
+                alt="Attendance Analyzer web app with numbered steps for student information, adding subjects, and uploading attendance screenshots for OCR."
+                width="1200" height="750" loading="lazy" decoding="async"
+              >
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Browser tool</span>
+                <span class="tag-year">Client-side OCR</span>
+              </div>
+              <h3>Attendance Analyzer</h3>
+              <p>
+                Upload attendance screenshots, extract the day-wise table with in-browser OCR, and generate a report
+                plus certificate PDFs for absent days. Everything runs client-side, so no attendance data leaves the
+                machine.
+              </p>
+              <ul class="metric-list">
+                <li>Tesseract.js for OCR and jsPDF for document generation, entirely in the browser</li>
+                <li>Multi-subject tracking with a guided three-step flow</li>
+              </ul>
+              <div class="project-tags">
+                <span>Tesseract.js</span><span>jsPDF</span><span>Vanilla JS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. DesVid -->
+          <article class="project-card" data-cat="tools">
+            <figure class="shot">
+              <img
+                src="assets/shots/desvid.webp"
+                alt="DesVid video platform landing page with a browse videos call to action and an embedded player panel."
+                width="1200" height="750" loading="lazy" decoding="async"
+              >
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Media app</span>
+                <span class="tag-year">Node / Express</span>
+              </div>
+              <h3>DesVid &mdash; tag-driven video library</h3>
+              <p>
+                A self-hosted video platform where categories emerge from the tags added at upload time rather than
+                from a fixed taxonomy, with an admin upload panel and local file storage.
+              </p>
+              <ul class="metric-list">
+                <li>Express backend handling uploads, storage and streaming</li>
+                <li>Automatic category browsing derived from tag metadata</li>
+              </ul>
+              <div class="project-tags">
+                <span>Node.js</span><span>Express</span><span>Vanilla JS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. Twitter influencer graph analysis -->
+          <article class="project-card" data-cat="tools">
+            <figure class="shot shot--fit">
+              <img
+                src="assets/shots/graph-network.webp"
+                alt="Interactive directed mention network of Twitter users, with nodes coloured by detected community and edge thickness scaled by mention volume."
+                width="820" height="470" loading="lazy" decoding="async"
+              >
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Graph analytics</span>
+                <span class="tag-year">Neo4j</span>
+              </div>
+              <h3>Twitter influencer graph analysis</h3>
+              <p>
+                A graph pipeline that models users, mentions and hashtags in Neo4j, then ranks influence and detects
+                communities over the mention network.
+              </p>
+              <ul class="metric-list">
+                <li>Cypher query library for centrality, community detection and hashtag co-occurrence</li>
+                <li>Interactive PyVis visualisations plus a dashboard for exploring top influencers</li>
+              </ul>
+              <div class="project-tags">
+                <span>Neo4j</span><span>Cypher</span><span>NetworkX</span><span>PyVis</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. Hospital Management System -->
+          <article class="project-card is-text" data-cat="product">
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Internship work</span>
+                <span class="tag-year">PHP / MySQL</span>
+              </div>
+              <h3>Hospital Management System</h3>
+              <p>
+                Backend modules for a hospital management system built during an internship at Infowiz &mdash; patient
+                registration, appointment scheduling, billing, doctor management and admin operations.
+              </p>
+              <ul class="metric-list">
+                <li>Secure role-based authentication over a normalized relational schema</li>
+                <li>Optimised SQL queries to cut page-load times on record-heavy screens</li>
+              </ul>
+              <div class="project-tags">
+                <span>PHP</span><span>MySQL</span><span>Auth</span><span>Agile</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11. AgriShift-Sentinel -->
+          <article class="project-card" data-cat="research systems">
+            <figure class="shot shot--fit">
+              <img
+                src="assets/shots/agentic-eval.webp"
+                alt="Two evaluation plots: prototype nonconformity score separating in-domain from out-of-domain images at AUROC 0.981, and a safety-coverage bar chart showing harmful actions dropping from 23.7% to 10.6%."
+                width="1200" height="480" loading="lazy" decoding="async"
+              >
+              <figcaption>Real evaluation output &mdash; shift separation and the safety/coverage trade-off</figcaption>
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Agentic AI &middot; Research</span>
+                <span class="tag-year">Flagship</span>
+              </div>
+              <h3>AgriShift-Sentinel &mdash; agentic plant disease diagnosis</h3>
+              <p>
+                An agentic layer wrapped around a 38-class PlantVillage ResNet-18 ensemble. A vision agent, a
+                confidence/quality agent and an orchestrator implement three-tier routing: answer directly, retrieve
+                and reason, or escalate to a human expert. A conformal prototype &ldquo;Shift Sentinel&rdquo; runs
+                <em>before</em> the healthy shortcut, because a low-confidence &ldquo;healthy&rdquo; prediction can be
+                a missed disease.
+              </p>
+              <ul class="metric-list">
+                <li><strong>75.8% &rarr; 14.2%</strong> harmful-action rate vs the always-trust-the-model baseline</li>
+                <li><strong>AUROC 0.981</strong> separating held-out in-domain from web out-of-domain images, at 0% in-domain false positives</li>
+                <li><strong>Grounded answers</strong> &mdash; bge-small + FAISS retrieval over an agronomy corpus, so treatment advice cites sources instead of hallucinating</li>
+                <li><strong>Image-quality gating</strong> (Laplacian blur + brightness) and 3-model ensemble disagreement catch confident misclassifications thresholding alone missed</li>
+              </ul>
+              <div class="project-tags">
+                <span>PyTorch</span><span>Multi-agent</span><span>Conformal prediction</span><span>FAISS</span><span>LLM routing</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12. CASSIA -->
           <article class="project-card" data-cat="research">
             <figure class="shot shot--fit">
               <img
@@ -246,7 +462,7 @@
             </div>
           </article>
 
-          <!-- 5. FedCEA -->
+          <!-- 13. FedCEA -->
           <article class="project-card" data-cat="research">
             <figure class="shot shot--fit">
               <img
@@ -277,7 +493,7 @@
             </div>
           </article>
 
-          <!-- 6. Federated plant disease -->
+          <!-- 14. Federated learning for plant disease detection -->
           <article class="project-card is-text" data-cat="research">
             <div class="project-body">
               <div class="project-topline">
@@ -299,267 +515,10 @@
             </div>
           </article>
 
-          <!-- 7. Crowd Voice -->
-          <article class="project-card" data-cat="tools systems">
-            <figure class="shot">
-              <img
-                src="assets/shots/crowdvoice.webp"
-                alt="Crowd Voice dashboard: a diverging voter sentiment bar chart, a predicted election standings panel ranking three parties, and a Pulse of the Crowd feed of classified social posts."
-                width="1200" height="833" loading="lazy" decoding="async"
-              >
-            </figure>
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="tag-role">NLP dashboard</span>
-                <span class="tag-year">FastAPI</span>
-              </div>
-              <h3>Crowd Voice &mdash; election sentiment predictor</h3>
-              <p>
-                A sentiment pipeline that ingests social and news posts, classifies them with a DistilBERT SST-2
-                transformer, and aggregates per-party net sentiment into live predicted standings.
-              </p>
-              <ul class="metric-list">
-                <li>FastAPI backend with pluggable scrapers (Reddit via PRAW, RSS via feedparser) and a mock source for offline runs</li>
-                <li>ECharts dashboard with a diverging positive/negative breakdown, ranked standings and a live post feed</li>
-              </ul>
-              <div class="project-tags">
-                <span>FastAPI</span><span>Transformers</span><span>DistilBERT</span><span>ECharts</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 8. ML Studio -->
-          <article class="project-card" data-cat="tools">
-            <figure class="shot">
-              <img
-                src="assets/shots/mlstudio-algo.webp"
-                alt="Machine Learning Studio nearest-neighbour page with an interactive lab: k and distance-metric controls, a scatter plot of labelled points around a query point, and a live math panel."
-                width="1200" height="750" loading="lazy" decoding="async"
-              >
-            </figure>
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="tag-role">Interactive learning</span>
-                <span class="tag-year">Zero dependencies</span>
-              </div>
-              <h3>Machine Learning Studio</h3>
-              <p>
-                A static, dependency-free site that teaches ML algorithms by letting you drive them. Every algorithm
-                page carries editable controls, step-by-step math with the current numbers substituted in, and a
-                logic trail explaining why each update happens.
-              </p>
-              <ul class="metric-list">
-                <li>Covers foundations, classification, graphical models and clustering through one shared page shell driven by a catalog</li>
-                <li>Plain HTML, CSS and JavaScript &mdash; no build step, no framework, hosted as static pages</li>
-              </ul>
-              <div class="project-tags">
-                <span>JavaScript</span><span>SVG</span><span>Static site</span><span>Education</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 9. Attendance Analyzer -->
-          <article class="project-card" data-cat="tools">
-            <figure class="shot">
-              <img
-                src="assets/shots/attendance.webp"
-                alt="Attendance Analyzer web app with numbered steps for student information, adding subjects, and uploading attendance screenshots for OCR."
-                width="1200" height="750" loading="lazy" decoding="async"
-              >
-            </figure>
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="tag-role">Browser tool</span>
-                <span class="tag-year">Client-side OCR</span>
-              </div>
-              <h3>Attendance Analyzer</h3>
-              <p>
-                Upload attendance screenshots, extract the day-wise table with in-browser OCR, and generate a report
-                plus certificate PDFs for absent days. Everything runs client-side, so no attendance data leaves the
-                machine.
-              </p>
-              <ul class="metric-list">
-                <li>Tesseract.js for OCR and jsPDF for document generation, entirely in the browser</li>
-                <li>Multi-subject tracking with a guided three-step flow</li>
-              </ul>
-              <div class="project-tags">
-                <span>Tesseract.js</span><span>jsPDF</span><span>Vanilla JS</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 10. DesVid -->
-          <article class="project-card" data-cat="tools">
-            <figure class="shot">
-              <img
-                src="assets/shots/desvid.webp"
-                alt="DesVid video platform landing page with a browse videos call to action and an embedded player panel."
-                width="1200" height="750" loading="lazy" decoding="async"
-              >
-            </figure>
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="tag-role">Media app</span>
-                <span class="tag-year">Node / Express</span>
-              </div>
-              <h3>DesVid &mdash; tag-driven video library</h3>
-              <p>
-                A self-hosted video platform where categories emerge from the tags added at upload time rather than
-                from a fixed taxonomy, with an admin upload panel and local file storage.
-              </p>
-              <ul class="metric-list">
-                <li>Express backend handling uploads, storage and streaming</li>
-                <li>Automatic category browsing derived from tag metadata</li>
-              </ul>
-              <div class="project-tags">
-                <span>Node.js</span><span>Express</span><span>Vanilla JS</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 11. Graph analysis -->
-          <article class="project-card" data-cat="tools">
-            <figure class="shot shot--fit">
-              <img
-                src="assets/shots/graph-network.webp"
-                alt="Interactive directed mention network of Twitter users, with nodes coloured by detected community and edge thickness scaled by mention volume."
-                width="820" height="470" loading="lazy" decoding="async"
-              >
-            </figure>
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="tag-role">Graph analytics</span>
-                <span class="tag-year">Neo4j</span>
-              </div>
-              <h3>Twitter influencer graph analysis</h3>
-              <p>
-                A graph pipeline that models users, mentions and hashtags in Neo4j, then ranks influence and detects
-                communities over the mention network.
-              </p>
-              <ul class="metric-list">
-                <li>Cypher query library for centrality, community detection and hashtag co-occurrence</li>
-                <li>Interactive PyVis visualisations plus a dashboard for exploring top influencers</li>
-              </ul>
-              <div class="project-tags">
-                <span>Neo4j</span><span>Cypher</span><span>NetworkX</span><span>PyVis</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 12. Loan sync suite -->
-          <article class="project-card is-text" data-cat="product systems">
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="tag-role">Distributed system</span>
-                <span class="tag-year">Offline-first</span>
-              </div>
-              <h3>Loan Manager Cloud Sync Suite</h3>
-              <p>
-                Three applications sharing one dataset through a cloud sync hub: a Flutter Android app for field
-                agents, the Node desktop back-office, and a FastAPI hub in the middle. Both clients hold their own
-                SQLite database and work with no network at all.
-              </p>
-              <ul class="metric-list">
-                <li><strong>Explicit, conflict-aware sync</strong> &mdash; UUID identity with last-write-wins reconciliation through a single <code>POST /api/sync</code> endpoint</li>
-                <li>Multi-tenant hub with company registration and JWT auth</li>
-                <li>Android app covers customers, loans with live EMI preview, receipts, register filters and a collections dashboard</li>
-              </ul>
-              <div class="project-tags">
-                <span>Flutter</span><span>FastAPI</span><span>SQLAlchemy</span><span>sqflite</span><span>JWT</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 13. PlanRemind -->
-          <article class="project-card is-text" data-cat="product systems">
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="tag-role">Android app</span>
-                <span class="tag-year">LLM-backed</span>
-              </div>
-              <h3>PlanRemind &mdash; AI study planner</h3>
-              <p>
-                An offline-first Jetpack Compose app that turns a student profile and syllabus into a structured study
-                plan, with Room as the single source of truth so the app stays useful without a network.
-              </p>
-              <ul class="metric-list">
-                <li><strong>Keys never touch the client</strong> &mdash; a Supabase Edge Function proxies OpenRouter, validates the JSON response and enforces timeouts</li>
-                <li>Clean MVVM with a <code>Resource&lt;T&gt;</code> result pattern; Room emits via Flow so the UI updates itself</li>
-                <li>Material 3 UI with reminders, calendar progress and statistics</li>
-              </ul>
-              <div class="project-tags">
-                <span>Kotlin</span><span>Jetpack Compose</span><span>Room</span><span>Supabase</span><span>OpenRouter</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 14. Hospital -->
-          <article class="project-card is-text" data-cat="product">
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="tag-role">Internship work</span>
-                <span class="tag-year">PHP / MySQL</span>
-              </div>
-              <h3>Hospital Management System</h3>
-              <p>
-                Backend modules for a hospital management system built during an internship at Infowiz &mdash; patient
-                registration, appointment scheduling, billing, doctor management and admin operations.
-              </p>
-              <ul class="metric-list">
-                <li>Secure role-based authentication over a normalized relational schema</li>
-                <li>Optimised SQL queries to cut page-load times on record-heavy screens</li>
-              </ul>
-              <div class="project-tags">
-                <span>PHP</span><span>MySQL</span><span>Auth</span><span>Agile</span>
-              </div>
-            </div>
-          </article>
-
         </div>
         <p class="empty-state" id="emptyState" hidden>No projects in this category.</p>
       </section>
 
-      <!-- ============================ RESEARCH ============================ -->
-      <section id="research" class="section-shell research-band">
-        <div class="section-heading">
-          <p class="section-kicker">Research direction</p>
-          <h2>Knowing when the model should not be trusted.</h2>
-          <p class="section-text">
-            The thread running through my research is selective prediction: a model that is confidently wrong is more
-            dangerous than one that abstains. Everything below is about measuring that and acting on it.
-          </p>
-        </div>
-        <div class="research-grid">
-          <article>
-            <span class="icon-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
-            </span>
-            <h3>Agentic routing</h3>
-            <p>Orchestrators that decide between answering, retrieving evidence, and escalating &mdash; and are evaluated on harmful-action rate, not just accuracy.</p>
-          </article>
-          <article>
-            <span class="icon-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M3 17l5-6 4 4 5-8 4 5"/><path d="M3 21h18"/></svg>
-            </span>
-            <h3>Calibration &amp; conformal guards</h3>
-            <p>Distribution-free thresholds that give a coverage guarantee, instead of a hand-tuned confidence cutoff that quietly fails off-distribution.</p>
-          </article>
-          <article>
-            <span class="icon-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M6 17a4 4 0 1 1 2.65-7M18 17a4 4 0 1 0-2.65-7M8 13h8M12 9v8"/></svg>
-            </span>
-            <h3>Federated learning</h3>
-            <p>FedAvg, FedProx, FedOpt, FedMA and SCAFFOLD under non-IID splits &mdash; what privacy actually costs in accuracy, convergence and communication.</p>
-          </article>
-          <article>
-            <span class="icon-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M5 5h14v10H5zM8 19h8M12 15v4M9 9h6M9 12h4"/></svg>
-            </span>
-            <h3>Local &amp; affordable inference</h3>
-            <p>Open-source models, Ollama, quantisation and retrieval over local indexes so useful AI does not require a per-token budget.</p>
-          </article>
-        </div>
-      </section>
 
       <!-- ============================ STACK ============================ -->
       <section id="stack" class="section-shell">
@@ -613,23 +572,23 @@
       <section id="about" class="section-shell two-column">
         <div>
           <p class="section-kicker">About</p>
-          <h2>Systems first, models second.</h2>
+          <h2>I like finishing things.</h2>
         </div>
         <div class="section-text">
           <p>
             I am an M.Tech Data Analytics student at Dr. B. R. Ambedkar National Institute of Technology Jalandhar,
-            working on LLM agents, selective prediction, federated learning and enterprise AI.
+            and a software developer who happens to work a lot with AI.
           </p>
           <p>
-            What I care about is the whole path from a model to something a person can rely on: the retrieval layer,
-            the routing policy, the evaluation harness that tells you it actually got better, the installer that puts
-            it on a shop owner's desktop. A model that scores well in a notebook and a system someone trusts with
-            their business are very different artefacts, and the gap between them is where I like to work.
+            The part I enjoy is the whole path: the model, yes, but also the API around it, the screen someone clicks,
+            the test that proves the money maths is right, and the installer that puts it on a shop owner's desktop.
+            A model that scores well in a notebook and a product someone trusts with their business are very different
+            artefacts, and closing that gap is the work I want to be doing.
           </p>
           <p>
-            I also make a point of shipping unglamorous software. The loan management system in the work section runs
-            a real finance business every day, offline, on one computer &mdash; and building it taught me more about
-            correctness than any benchmark has.
+            That includes the unglamorous parts. The loan management system at the top of my work runs a real finance
+            business every day &mdash; offline, on one computer &mdash; and shipping it taught me more about
+            correctness, packaging and support than any benchmark has.
           </p>
         </div>
       </section>
@@ -667,6 +626,49 @@
         </div>
       </section>
 
+      <!-- ============================ RESEARCH ============================ -->
+      <section id="research" class="section-shell research-band">
+        <div class="section-heading">
+          <p class="section-kicker">Research interests</p>
+          <h2>What I read about after hours.</h2>
+          <p class="section-text">
+            Building is the day job. These are the questions I keep circling back to, and they feed straight into the
+            products &mdash; a system that knows when to stop and ask is a better product, not just a better paper.
+            Somewhere down the line I would like to take these further.
+          </p>
+        </div>
+        <div class="research-grid">
+          <article>
+            <span class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
+            <h3>Agentic routing</h3>
+            <p>Orchestrators that decide between answering, retrieving evidence, and escalating &mdash; and are evaluated on harmful-action rate, not just accuracy.</p>
+          </article>
+          <article>
+            <span class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 17l5-6 4 4 5-8 4 5"/><path d="M3 21h18"/></svg>
+            </span>
+            <h3>Calibration &amp; conformal guards</h3>
+            <p>Distribution-free thresholds that give a coverage guarantee, instead of a hand-tuned confidence cutoff that quietly fails off-distribution.</p>
+          </article>
+          <article>
+            <span class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6 17a4 4 0 1 1 2.65-7M18 17a4 4 0 1 0-2.65-7M8 13h8M12 9v8"/></svg>
+            </span>
+            <h3>Federated learning</h3>
+            <p>FedAvg, FedProx, FedOpt, FedMA and SCAFFOLD under non-IID splits &mdash; what privacy actually costs in accuracy, convergence and communication.</p>
+          </article>
+          <article>
+            <span class="icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 5h14v10H5zM8 19h8M12 15v4M9 9h6M9 12h4"/></svg>
+            </span>
+            <h3>Local &amp; affordable inference</h3>
+            <p>Open-source models, Ollama, quantisation and retrieval over local indexes so useful AI does not require a per-token budget.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="section-shell achievement-grid">
         <article>
           <p class="section-kicker">Achievements</p>
@@ -698,10 +700,10 @@
       <section id="contact" class="section-shell contact-section">
         <div>
           <p class="section-kicker">Contact</p>
-          <h2>Open to AI/ML roles and research collaboration.</h2>
+          <h2>Open to AI/ML, software engineering and full-stack roles.</h2>
           <p class="section-text">
-            Particularly interested in agentic systems, retrieval infrastructure, selective prediction and local AI
-            deployment. Happy to talk about any of the work above.
+            I am looking for a team where I can build and ship products end to end &mdash; AI/ML engineering, backend,
+            or full-stack. Happy to talk about any of the work above, and glad to walk through the code.
           </p>
         </div>
         <div class="contact-card">
