@@ -516,15 +516,40 @@ h3 {
   background: rgba(0, 0, 0, 0.3);
 }
 
+/* Screenshots arrive at whatever shape the source app happened to be (1.26 to
+   3.9 wide). Force one box so cards in a row line up and nothing jumps while
+   lazy images land. */
 .shot img {
   display: block;
   width: 100%;
+  /* height:auto is load-bearing — without it the HTML height attribute acts as
+     a presentational height, which pins the box and makes aspect-ratio a no-op. */
   height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
   cursor: zoom-in;
   transition: opacity 200ms ease;
 }
 
 .shot img:hover { opacity: 0.9; }
+
+/* Charts and pages that are much wider than the box, or that would lose their
+   subject to a crop — show them whole, letterboxed. */
+.shot--fit { padding: 16px; background: rgba(255, 255, 255, 0.03); }
+
+.shot--fit img {
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* A full-width card is alone in its row, so there is nothing to line up with.
+   Let those images keep their own shape rather than letterboxing a 2.5-ratio
+   chart into a 1.6 box and leaving a dead band underneath. */
+.project-card.is-wide .shot img {
+  aspect-ratio: auto;
+  object-fit: contain;
+}
 
 .shot-duo {
   display: grid;
