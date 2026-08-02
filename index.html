@@ -5,293 +5,664 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Lovepreet Sharma - AI/ML portfolio focused on LLM agents, federated learning, enterprise AI, data analytics, and intelligent software systems."
+      content="Lovepreet Sharma - AI/ML engineer building agentic AI systems, retrieval platforms, federated learning research, and shipped production software."
     >
     <meta name="theme-color" content="#070a12">
-    <title>Lovepreet Sharma | AI/ML Portfolio</title>
+    <title>Lovepreet Sharma | AI/ML Engineer</title>
     <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="32" fill="%2372f2c8"/><text x="32" y="39" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="%23070a12">LS</text></svg>'>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <canvas id="neuralCanvas" aria-hidden="true"></canvas>
 
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Lovepreet Sharma home">
         <span class="brand-mark">LS</span>
-        <span>Lovepreet Sharma</span>
+        <span class="brand-name">Lovepreet Sharma</span>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="#work">Work</a>
         <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
+        <a href="#stack">Stack</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </header>
 
-    <main id="top">
-      <section class="hero section-shell">
+    <main id="main">
+      <section class="hero section-shell" id="top">
         <div class="hero-copy">
-          <p class="eyebrow">M.Tech Data Analytics | NIT Jalandhar</p>
-          <h1>Lovepreet Sharma</h1>
-          <p class="hero-role">AI/ML engineer focused on autonomous agents, federated learning, and intelligent software.</p>
+          <p class="eyebrow"><span class="pulse-dot"></span> M.Tech Data Analytics &middot; NIT Jalandhar</p>
+          <h1>Lovepreet<br>Sharma</h1>
+          <p class="hero-role">I build AI systems that know when <em>not</em> to act.</p>
           <p class="hero-text">
-            I build systems, not just models: LLM agents that reason and plan, AI workflows that automate enterprise work,
-            and applied ML projects grounded in data, software engineering, and first-principles thinking.
+            AI/ML engineer and software developer. I ship end-to-end systems &mdash; multi-agent diagnosis pipelines with
+            calibrated abstention, retrieval platforms with cited answers, federated learning experiments, and
+            conventional production software that a real business depends on every day.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#projects">View projects</a>
-            <a class="button secondary" href="resume.pdf">Resume</a>
+            <a class="button primary" href="#work">View work</a>
+            <a class="button secondary" href="#contact">Get in touch</a>
           </div>
+
+          <dl class="hero-stats">
+            <div>
+              <dt>Harmful automated actions</dt>
+              <dd><span class="stat-num">75.8% &rarr; 14.2%</span></dd>
+              <dd class="stat-note">Agentic routing over a 190-image evaluation</dd>
+            </div>
+            <div>
+              <dt>Shift detection AUROC</dt>
+              <dd><span class="stat-num">0.981</span></dd>
+              <dd class="stat-note">Conformal prototype guard, 0% in-domain false positives</dd>
+            </div>
+            <div>
+              <dt>GATE CS/IT qualified</dt>
+              <dd><span class="stat-num">3&times;</span></dd>
+              <dd class="stat-note">2024, 2025 and 2026</dd>
+            </div>
+          </dl>
         </div>
 
-        <aside class="hero-panel" aria-label="Current AI focus">
+        <aside class="hero-panel" aria-label="Current focus">
           <div class="signal-card">
             <span class="pulse"></span>
-            <p>Current research focus</p>
-            <h2>LLM-based autonomous agents for enterprise applications</h2>
+            <p>Current research</p>
+            <h2>AgriShift&#8209;Sentinel</h2>
+            <p class="signal-sub">
+              Conformal prototype guarding for agentic plant-disease diagnosis under distribution shift &mdash;
+              catching the confident-but-wrong cases that thresholds miss.
+            </p>
           </div>
           <div class="model-stack">
-            <span>Reasoning</span>
-            <span>Planning</span>
-            <span>RAG</span>
-            <span>Local AI</span>
-            <span>Multi-agent collaboration</span>
-            <span>Workflow automation</span>
+            <span>Agentic routing</span>
+            <span>Conformal prediction</span>
+            <span>Hybrid RAG</span>
+            <span>Federated learning</span>
+            <span>Local inference</span>
+            <span>Offline-first software</span>
           </div>
         </aside>
       </section>
 
-      <section id="about" class="section-shell two-column">
-        <div>
-          <p class="section-kicker">About</p>
-          <h2>Curious by first principles, practical by implementation.</h2>
-        </div>
-        <div class="section-text">
-          <p>
-            I am an M.Tech Data Analytics student at Dr. B. R. Ambedkar National Institute of Technology Jalandhar,
-            focused on Artificial Intelligence, Machine Learning, LLMs, autonomous AI agents, multi-agent systems,
-            federated learning, and intelligent enterprise software.
-          </p>
-          <p>
-            My learning style is hands-on and systems-oriented. I like understanding how models, tools, infrastructure,
-            data pipelines, and user-facing software fit together so AI can solve real business problems affordably and
-            reliably, including with open-source models that run locally.
+      <!-- ============================ WORK ============================ -->
+      <section id="work" class="section-shell">
+        <div class="section-heading">
+          <p class="section-kicker">Selected work</p>
+          <h2>Fourteen projects, built end to end.</h2>
+          <p class="section-text">
+            Everything below is code I wrote and ran. Screenshots are captured from the actual running
+            applications and from the real evaluation output of the research pipelines &mdash; not mockups.
           </p>
         </div>
+
+        <div class="filter-bar" role="tablist" aria-label="Filter projects">
+          <button class="filter is-active" type="button" role="tab" aria-selected="true" data-filter="all">All</button>
+          <button class="filter" type="button" role="tab" aria-selected="false" data-filter="research">Research</button>
+          <button class="filter" type="button" role="tab" aria-selected="false" data-filter="systems">AI systems</button>
+          <button class="filter" type="button" role="tab" aria-selected="false" data-filter="product">Shipped products</button>
+          <button class="filter" type="button" role="tab" aria-selected="false" data-filter="tools">Apps &amp; tools</button>
+        </div>
+
+        <div class="project-grid" id="projectGrid">
+
+          <!-- 1. AgriShift-Sentinel -->
+          <article class="project-card is-wide" data-cat="research systems">
+            <figure class="shot">
+              <img
+                src="assets/shots/agentic-eval.webp"
+                alt="Two evaluation plots: prototype nonconformity score separating in-domain from out-of-domain images at AUROC 0.981, and a safety-coverage bar chart showing harmful actions dropping from 23.7% to 10.6%."
+                width="1200" height="463" loading="lazy" decoding="async"
+              >
+              <figcaption>Real evaluation output &mdash; shift separation and the safety/coverage trade-off</figcaption>
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Agentic AI &middot; Research</span>
+                <span class="tag-year">Flagship</span>
+              </div>
+              <h3>AgriShift-Sentinel &mdash; agentic plant disease diagnosis</h3>
+              <p>
+                An agentic layer wrapped around a 38-class PlantVillage ResNet-18 ensemble. A vision agent, a
+                confidence/quality agent and an orchestrator implement three-tier routing: answer directly, retrieve
+                and reason, or escalate to a human expert. A conformal prototype &ldquo;Shift Sentinel&rdquo; runs
+                <em>before</em> the healthy shortcut, because a low-confidence &ldquo;healthy&rdquo; prediction can be
+                a missed disease.
+              </p>
+              <ul class="metric-list">
+                <li><strong>75.8% &rarr; 14.2%</strong> harmful-action rate vs the always-trust-the-model baseline</li>
+                <li><strong>AUROC 0.981</strong> separating held-out in-domain from web out-of-domain images, at 0% in-domain false positives</li>
+                <li><strong>Grounded answers</strong> &mdash; bge-small + FAISS retrieval over an agronomy corpus, so treatment advice cites sources instead of hallucinating</li>
+                <li><strong>Image-quality gating</strong> (Laplacian blur + brightness) and 3-model ensemble disagreement catch confident misclassifications thresholding alone missed</li>
+              </ul>
+              <div class="project-tags">
+                <span>PyTorch</span><span>Multi-agent</span><span>Conformal prediction</span><span>FAISS</span><span>LLM routing</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Loan Manager -->
+          <article class="project-card is-wide" data-cat="product">
+            <figure class="shot shot-duo">
+              <img
+                src="assets/shots/loan-manager.webp"
+                alt="Loan Manager dashboard showing 8 customers, portfolio outstanding of ₹15,12,743, a six-month collections bar chart and a recent payments list."
+                width="1200" height="750" loading="lazy" decoding="async"
+              >
+              <img
+                src="assets/shots/loan-loans.webp"
+                alt="Loan Manager loans register listing eight loans with amount, installment, outstanding balance, next due date and active or overdue status."
+                width="1200" height="750" loading="lazy" decoding="async"
+              >
+              <figcaption>The running app &mdash; dashboard and loan register (demo data)</figcaption>
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Production software</span>
+                <span class="tag-year">In daily use</span>
+              </div>
+              <h3>Loan Manager &mdash; offline finance back-office</h3>
+              <p>
+                A fully offline, zero-install loan management system shipped to a small finance business and used
+                every day. Pure JavaScript on Node's built-in SQLite engine, so there are no native modules to compile
+                and the whole thing ships as a portable Windows bundle with an embedded runtime.
+              </p>
+              <ul class="metric-list">
+                <li><strong>Four interest models</strong> &mdash; reducing-balance EMI, flat, fixed-installment and interest-free &mdash; across daily, weekly, fortnightly, monthly and custom schedules</li>
+                <li><strong>Correct by construction</strong> &mdash; balances are recomputed from immutable payment history rather than mutated in place, covered by a 35-assertion test suite over the money math</li>
+                <li><strong>Automatic allocation</strong> across penalty, interest and principal, with printable receipts, statements and agreements</li>
+                <li><strong>Ships itself</strong> &mdash; NSIS installer and portable ZIP built by a GitHub Actions pipeline, plus crash-safe staged backup/restore</li>
+              </ul>
+              <div class="project-tags">
+                <span>Node.js</span><span>node:sqlite</span><span>Express</span><span>NSIS</span><span>GitHub Actions</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. RAG Engine -->
+          <article class="project-card" data-cat="systems">
+            <figure class="shot">
+              <img
+                src="assets/shots/rag-login.webp"
+                alt="Knowledge AI sign-in screen with email and password fields on a clean light background."
+                width="780" height="620" loading="lazy" decoding="async"
+              >
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">RAG platform</span>
+                <span class="tag-year">Full stack</span>
+              </div>
+              <h3>RAG Engine &mdash; document Q&amp;A with citations</h3>
+              <p>
+                A production-style retrieval platform that ingests PDF, DOCX, HTML, Markdown, CSV and JSON, then
+                answers questions with page-level citations. One <code>docker compose up</code> to deploy.
+              </p>
+              <ul class="metric-list">
+                <li><strong>Hybrid retrieval</strong> &mdash; dense FAISS plus BM25 fused by reciprocal rank, with optional bge-reranker-base cross-encoder reranking</li>
+                <li><strong>Full query pipeline</strong> &mdash; normalization, metadata-filter extraction, query classification, retrieval confidence scoring and post-generation answer validation</li>
+                <li><strong>Provider-agnostic</strong> LLM factory across OpenAI, Anthropic, OpenRouter and Ollama</li>
+                <li>JWT auth with roles, rate limiting, security headers, structured logging, per-provider cost tracking and a background job queue</li>
+              </ul>
+              <div class="project-tags">
+                <span>FastAPI</span><span>LangChain</span><span>FAISS</span><span>Next.js</span><span>Docker</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. CASSIA -->
+          <article class="project-card" data-cat="research">
+            <figure class="shot">
+              <img
+                src="assets/shots/cassia-budget.webp"
+                alt="Accuracy versus compute trade-off line chart. A nested cross-validation log-evidence broker rises to about 45% top-1 accuracy while a baseline controller stays near 32%, both well above the 24% original-view baseline."
+                width="1200" height="800" loading="lazy" decoding="async"
+              >
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Research</span>
+                <span class="tag-year">Autonomous swarm</span>
+              </div>
+              <h3>CASSIA &mdash; calibration-aware sequential swarm</h3>
+              <p>
+                A backbone-agnostic inference layer for image classification under domain shift that never defers to a
+                human. Instead it buys additional evidence: deterministic counterfactual view agents that change one
+                nuisance factor at a time while preserving the putative disease.
+              </p>
+              <ul class="metric-list">
+                <li><strong>24.2% &rarr; 33.2% top-1</strong> on out-of-domain field images, at ~3.2 views per image instead of all ten</li>
+                <li><strong>Bayesian competence-and-dependency fusion</strong> learns each agent's class-conditional confusion and discounts agents whose errors correlate</li>
+                <li><strong>Budgeted orchestration</strong> purchases the next view by exact expected information gain per unit cost, stopping on an autonomous stability quorum</li>
+                <li>Calibrated by source-only shift rehearsal &mdash; no test label ever tunes the system</li>
+              </ul>
+              <div class="project-tags">
+                <span>PyTorch</span><span>Bayesian fusion</span><span>Active inference</span><span>Domain shift</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. FedCEA -->
+          <article class="project-card" data-cat="research">
+            <figure class="shot">
+              <img
+                src="assets/shots/fedcea-accuracy.webp"
+                alt="Bar chart comparing unseen-domain accuracy across federated methods under different client skew regimes."
+                width="1200" height="800" loading="lazy" decoding="async"
+              >
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Research</span>
+                <span class="tag-year">Federated</span>
+              </div>
+              <h3>FedCEA &mdash; client discordance under drift</h3>
+              <p>
+                A federated pilot investigating which layer carries the most client disagreement under different
+                non-IID skew regimes, and whether correcting that layer helps generalisation to unseen domains.
+              </p>
+              <ul class="metric-list">
+                <li>The most discordant layer <strong>moves with the skew regime</strong> &mdash; the first feature block dominates under feature skew, the classifier head under label skew</li>
+                <li>Correcting it did <strong>not</strong> reliably improve unseen-domain accuracy &mdash; a clean negative result suggesting feature diversity can be a feature, not a defect</li>
+                <li>Benchmarked against FedAvg, SCAFFOLD and FedPVR across feature, label and mixed drift</li>
+                <li>Runs unattended on the NITJ H100 cluster through single-MIG PBS jobs</li>
+              </ul>
+              <div class="project-tags">
+                <span>PyTorch</span><span>Non-IID</span><span>SCAFFOLD</span><span>PBS / HPC</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Federated plant disease -->
+          <article class="project-card is-text" data-cat="research">
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Research</span>
+                <span class="tag-year">Review paper</span>
+              </div>
+              <h3>Federated learning for plant disease detection</h3>
+              <p>
+                A 5-client FedProx simulation on PlantVillage with ResNet-50 &mdash; 50 communication rounds, 10 local
+                epochs each, mixed-precision training, logging per-round accuracy, precision, recall and F1.
+              </p>
+              <ul class="metric-list">
+                <li>Benchmarked <strong>FedAvg, FedProx, FedOpt, FedMA and SCAFFOLD</strong> under non-IID client splits to quantify what privacy costs in accuracy and convergence</li>
+                <li>Authored a review paper on privacy-preserving federated learning for precision agriculture, covering communication efficiency and client heterogeneity</li>
+              </ul>
+              <div class="project-tags">
+                <span>PyTorch</span><span>FedProx</span><span>ResNet-50</span><span>PlantVillage</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Crowd Voice -->
+          <article class="project-card" data-cat="tools systems">
+            <figure class="shot">
+              <img
+                src="assets/shots/crowdvoice.webp"
+                alt="Crowd Voice dashboard: a diverging voter sentiment bar chart, a predicted election standings panel ranking three parties, and a Pulse of the Crowd feed of classified social posts."
+                width="1200" height="833" loading="lazy" decoding="async"
+              >
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">NLP dashboard</span>
+                <span class="tag-year">FastAPI</span>
+              </div>
+              <h3>Crowd Voice &mdash; election sentiment predictor</h3>
+              <p>
+                A sentiment pipeline that ingests social and news posts, classifies them with a DistilBERT SST-2
+                transformer, and aggregates per-party net sentiment into live predicted standings.
+              </p>
+              <ul class="metric-list">
+                <li>FastAPI backend with pluggable scrapers (Reddit via PRAW, RSS via feedparser) and a mock source for offline runs</li>
+                <li>ECharts dashboard with a diverging positive/negative breakdown, ranked standings and a live post feed</li>
+              </ul>
+              <div class="project-tags">
+                <span>FastAPI</span><span>Transformers</span><span>DistilBERT</span><span>ECharts</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. ML Studio -->
+          <article class="project-card" data-cat="tools">
+            <figure class="shot">
+              <img
+                src="assets/shots/mlstudio-algo.webp"
+                alt="Machine Learning Studio nearest-neighbour page with an interactive lab: k and distance-metric controls, a scatter plot of labelled points around a query point, and a live math panel."
+                width="1200" height="750" loading="lazy" decoding="async"
+              >
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Interactive learning</span>
+                <span class="tag-year">Zero dependencies</span>
+              </div>
+              <h3>Machine Learning Studio</h3>
+              <p>
+                A static, dependency-free site that teaches ML algorithms by letting you drive them. Every algorithm
+                page carries editable controls, step-by-step math with the current numbers substituted in, and a
+                logic trail explaining why each update happens.
+              </p>
+              <ul class="metric-list">
+                <li>Covers foundations, classification, graphical models and clustering through one shared page shell driven by a catalog</li>
+                <li>Plain HTML, CSS and JavaScript &mdash; no build step, no framework, hosted as static pages</li>
+              </ul>
+              <div class="project-tags">
+                <span>JavaScript</span><span>SVG</span><span>Static site</span><span>Education</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. Attendance Analyzer -->
+          <article class="project-card" data-cat="tools">
+            <figure class="shot">
+              <img
+                src="assets/shots/attendance.webp"
+                alt="Attendance Analyzer web app with numbered steps for student information, adding subjects, and uploading attendance screenshots for OCR."
+                width="1200" height="750" loading="lazy" decoding="async"
+              >
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Browser tool</span>
+                <span class="tag-year">Client-side OCR</span>
+              </div>
+              <h3>Attendance Analyzer</h3>
+              <p>
+                Upload attendance screenshots, extract the day-wise table with in-browser OCR, and generate a report
+                plus certificate PDFs for absent days. Everything runs client-side, so no attendance data leaves the
+                machine.
+              </p>
+              <ul class="metric-list">
+                <li>Tesseract.js for OCR and jsPDF for document generation, entirely in the browser</li>
+                <li>Multi-subject tracking with a guided three-step flow</li>
+              </ul>
+              <div class="project-tags">
+                <span>Tesseract.js</span><span>jsPDF</span><span>Vanilla JS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. DesVid -->
+          <article class="project-card" data-cat="tools">
+            <figure class="shot">
+              <img
+                src="assets/shots/desvid.webp"
+                alt="DesVid video platform landing page with a browse videos call to action and an embedded player panel."
+                width="1200" height="750" loading="lazy" decoding="async"
+              >
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Media app</span>
+                <span class="tag-year">Node / Express</span>
+              </div>
+              <h3>DesVid &mdash; tag-driven video library</h3>
+              <p>
+                A self-hosted video platform where categories emerge from the tags added at upload time rather than
+                from a fixed taxonomy, with an admin upload panel and local file storage.
+              </p>
+              <ul class="metric-list">
+                <li>Express backend handling uploads, storage and streaming</li>
+                <li>Automatic category browsing derived from tag metadata</li>
+              </ul>
+              <div class="project-tags">
+                <span>Node.js</span><span>Express</span><span>Vanilla JS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11. Graph analysis -->
+          <article class="project-card" data-cat="tools">
+            <figure class="shot">
+              <img
+                src="assets/shots/graph-network.webp"
+                alt="Interactive directed mention network of Twitter users, with nodes coloured by detected community and edge thickness scaled by mention volume."
+                width="820" height="470" loading="lazy" decoding="async"
+              >
+            </figure>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Graph analytics</span>
+                <span class="tag-year">Neo4j</span>
+              </div>
+              <h3>Twitter influencer graph analysis</h3>
+              <p>
+                A graph pipeline that models users, mentions and hashtags in Neo4j, then ranks influence and detects
+                communities over the mention network.
+              </p>
+              <ul class="metric-list">
+                <li>Cypher query library for centrality, community detection and hashtag co-occurrence</li>
+                <li>Interactive PyVis visualisations plus a dashboard for exploring top influencers</li>
+              </ul>
+              <div class="project-tags">
+                <span>Neo4j</span><span>Cypher</span><span>NetworkX</span><span>PyVis</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12. Loan sync suite -->
+          <article class="project-card is-text" data-cat="product systems">
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Distributed system</span>
+                <span class="tag-year">Offline-first</span>
+              </div>
+              <h3>Loan Manager Cloud Sync Suite</h3>
+              <p>
+                Three applications sharing one dataset through a cloud sync hub: a Flutter Android app for field
+                agents, the Node desktop back-office, and a FastAPI hub in the middle. Both clients hold their own
+                SQLite database and work with no network at all.
+              </p>
+              <ul class="metric-list">
+                <li><strong>Explicit, conflict-aware sync</strong> &mdash; UUID identity with last-write-wins reconciliation through a single <code>POST /api/sync</code> endpoint</li>
+                <li>Multi-tenant hub with company registration and JWT auth</li>
+                <li>Android app covers customers, loans with live EMI preview, receipts, register filters and a collections dashboard</li>
+              </ul>
+              <div class="project-tags">
+                <span>Flutter</span><span>FastAPI</span><span>SQLAlchemy</span><span>sqflite</span><span>JWT</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 13. PlanRemind -->
+          <article class="project-card is-text" data-cat="product systems">
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Android app</span>
+                <span class="tag-year">LLM-backed</span>
+              </div>
+              <h3>PlanRemind &mdash; AI study planner</h3>
+              <p>
+                An offline-first Jetpack Compose app that turns a student profile and syllabus into a structured study
+                plan, with Room as the single source of truth so the app stays useful without a network.
+              </p>
+              <ul class="metric-list">
+                <li><strong>Keys never touch the client</strong> &mdash; a Supabase Edge Function proxies OpenRouter, validates the JSON response and enforces timeouts</li>
+                <li>Clean MVVM with a <code>Resource&lt;T&gt;</code> result pattern; Room emits via Flow so the UI updates itself</li>
+                <li>Material 3 UI with reminders, calendar progress and statistics</li>
+              </ul>
+              <div class="project-tags">
+                <span>Kotlin</span><span>Jetpack Compose</span><span>Room</span><span>Supabase</span><span>OpenRouter</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 14. Hospital -->
+          <article class="project-card is-text" data-cat="product">
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="tag-role">Internship work</span>
+                <span class="tag-year">PHP / MySQL</span>
+              </div>
+              <h3>Hospital Management System</h3>
+              <p>
+                Backend modules for a hospital management system built during an internship at Infowiz &mdash; patient
+                registration, appointment scheduling, billing, doctor management and admin operations.
+              </p>
+              <ul class="metric-list">
+                <li>Secure role-based authentication over a normalized relational schema</li>
+                <li>Optimised SQL queries to cut page-load times on record-heavy screens</li>
+              </ul>
+              <div class="project-tags">
+                <span>PHP</span><span>MySQL</span><span>Auth</span><span>Agile</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <p class="empty-state" id="emptyState" hidden>No projects in this category.</p>
       </section>
 
-      <section class="section-shell timeline-section">
-        <div class="section-heading">
-          <p class="section-kicker">Education & Experience</p>
-          <h2>Academic depth with software delivery experience.</h2>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
-            <p class="timeline-date">2025-2027</p>
-            <h3>M.Tech in Data Analytics</h3>
-            <p>NIT Jalandhar. Current focus: AI agents, local AI, enterprise AI, federated learning, RAG, and efficient inference.</p>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
-            <p class="timeline-date">Jan 2025 - Jun 2025</p>
-            <h3>Software Engineer Intern</h3>
-            <p>ThinkNEXT Technologies Pvt. Ltd. Worked across machine learning, software development, data processing, and model development.</p>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
-            <p class="timeline-date">B.Tech</p>
-            <h3>Computer Science</h3>
-            <p>CGPA: 7.85. Built a base in programming, databases, software engineering, and applied computer science.</p>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
-            <p class="timeline-date">Higher Secondary</p>
-            <h3>Meritorious Student</h3>
-            <p>Scholarship student at Senior Secondary Residential School for Meritorious Students, Bathinda.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills" class="section-shell">
-        <div class="section-heading">
-          <p class="section-kicker">Skills</p>
-          <h2>AI/ML toolkit for research prototypes and production-minded systems.</h2>
-        </div>
-        <div class="skills-grid">
-          <article class="skill-card featured">
-            <h3>AI & Machine Learning</h3>
-            <div class="chip-list">
-              <span>Machine Learning</span><span>Deep Learning</span><span>Neural Networks</span><span>Computer Vision</span>
-              <span>NLP</span><span>Transformers</span><span>Prompt Engineering</span><span>RAG</span>
-              <span>Federated Learning</span><span>AI Agents</span><span>Multi-Agent Systems</span>
-            </div>
-          </article>
-          <article class="skill-card">
-            <h3>Programming</h3>
-            <div class="chip-list">
-              <span>Python</span><span>PHP</span><span>SQL</span><span>Java</span><span>C++</span><span>C</span>
-            </div>
-          </article>
-          <article class="skill-card">
-            <h3>Frameworks & Data</h3>
-            <div class="chip-list">
-              <span>TensorFlow</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>MySQL</span>
-            </div>
-          </article>
-          <article class="skill-card">
-            <h3>Tools & AI Workflow</h3>
-            <div class="chip-list">
-              <span>Git</span><span>GitHub</span><span>Docker</span><span>VS Code</span><span>Kaggle</span>
-              <span>Google Colab</span><span>OpenRouter</span><span>Ollama</span><span>Codex</span><span>Claude Code</span>
-            </div>
-          </article>
-          <article class="skill-card">
-            <h3>Currently Learning</h3>
-            <div class="chip-list">
-              <span>LangGraph</span><span>CrewAI</span><span>AutoGen</span><span>OpenAI Agents SDK</span><span>MCP</span>
-              <span>vLLM</span><span>llama.cpp</span><span>LoRA</span><span>QLoRA</span>
-            </div>
-          </article>
-          <article class="skill-card">
-            <h3>Web Development</h3>
-            <div class="chip-list">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
+      <!-- ============================ RESEARCH ============================ -->
       <section id="research" class="section-shell research-band">
         <div class="section-heading">
-          <p class="section-kicker">Research Direction</p>
-          <h2>From models to autonomous AI systems.</h2>
+          <p class="section-kicker">Research direction</p>
+          <h2>Knowing when the model should not be trusted.</h2>
+          <p class="section-text">
+            The thread running through my research is selective prediction: a model that is confidently wrong is more
+            dangerous than one that abstains. Everything below is about measuring that and acting on it.
+          </p>
         </div>
         <div class="research-grid">
           <article>
             <span class="icon-circle" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
             </span>
-            <h3>Autonomous Agents</h3>
-            <p>Agents capable of reasoning, planning, debugging code, executing tasks, and coordinating with other agents.</p>
+            <h3>Agentic routing</h3>
+            <p>Orchestrators that decide between answering, retrieving evidence, and escalating &mdash; and are evaluated on harmful-action rate, not just accuracy.</p>
           </article>
           <article>
             <span class="icon-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 7h16M7 7v10M17 7v10M5 17h14M9 11h6M9 14h6"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M3 17l5-6 4 4 5-8 4 5"/><path d="M3 21h18"/></svg>
             </span>
-            <h3>Enterprise AI</h3>
-            <p>Workflow automation, internal copilots, local deployments, and AI systems that improve business operations.</p>
+            <h3>Calibration &amp; conformal guards</h3>
+            <p>Distribution-free thresholds that give a coverage guarantee, instead of a hand-tuned confidence cutoff that quietly fails off-distribution.</p>
           </article>
           <article>
             <span class="icon-circle" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M6 17a4 4 0 1 1 2.65-7M18 17a4 4 0 1 0-2.65-7M8 13h8M12 9v8"/></svg>
             </span>
-            <h3>Federated Learning</h3>
-            <p>Privacy-aware learning strategies including FedAvg, FedProx, SCAFFOLD, FedMA, and FedOpt.</p>
+            <h3>Federated learning</h3>
+            <p>FedAvg, FedProx, FedOpt, FedMA and SCAFFOLD under non-IID splits &mdash; what privacy actually costs in accuracy, convergence and communication.</p>
           </article>
           <article>
             <span class="icon-circle" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M5 5h14v10H5zM8 19h8M12 15v4M9 9h6M9 12h4"/></svg>
             </span>
-            <h3>Local AI Infrastructure</h3>
-            <p>Open-source LLMs, Ollama, vLLM, llama.cpp, fine-tuning, and efficient inference for affordable deployment.</p>
+            <h3>Local &amp; affordable inference</h3>
+            <p>Open-source models, Ollama, quantisation and retrieval over local indexes so useful AI does not require a per-token budget.</p>
           </article>
         </div>
       </section>
 
-      <section id="projects" class="section-shell">
+      <!-- ============================ STACK ============================ -->
+      <section id="stack" class="section-shell">
         <div class="section-heading">
-          <p class="section-kicker">Projects</p>
-          <h2>Applied AI, data analytics, and full-stack software projects.</h2>
+          <p class="section-kicker">Stack</p>
+          <h2>What I reach for.</h2>
         </div>
-        <div class="project-grid">
-          <article class="project-card spotlight">
-            <div class="project-topline">
-              <span>AI Agents</span>
-              <span>Research Platform</span>
+        <div class="skills-grid">
+          <article class="skill-card featured">
+            <h3>AI &amp; machine learning</h3>
+            <div class="chip-list">
+              <span>PyTorch</span><span>TensorFlow</span><span>Scikit-learn</span><span>LangChain</span><span>LangGraph</span>
+              <span>Transformers</span><span>RAG</span><span>Multi-agent systems</span><span>Federated learning</span>
+              <span>Computer vision</span><span>NLP</span><span>Conformal prediction</span><span>Model evaluation</span>
             </div>
-            <h3>AI Agent Platform</h3>
-            <p>
-              A platform concept for autonomous agents that can reason, plan, debug, execute tasks, collaborate with other
-              agents, and automate software workflows. The project reflects my core interest in agentic coding, tool use,
-              memory, orchestration, and locally deployable AI systems.
-            </p>
-            <div class="project-tags"><span>LLMs</span><span>Planning</span><span>Multi-Agent Systems</span><span>Automation</span></div>
           </article>
-          <article class="project-card">
-            <div class="project-topline">
-              <span>AI/ML</span>
-              <span>Mobile App</span>
+          <article class="skill-card">
+            <h3>Languages</h3>
+            <div class="chip-list">
+              <span>Python</span><span>JavaScript</span><span>Kotlin</span><span>Java</span><span>C++</span><span>C</span><span>SQL</span><span>PHP</span>
             </div>
-            <h3>AI Study Planner</h3>
-            <p>
-              A production-oriented Flutter app for exam preparation, reminders, calendar progress, statistics, and an AI
-              study assistant. It uses offline-first persistence, clean architecture, Riverpod state management, and a
-              backend LLM flow for syllabus-aware study plan generation.
-            </p>
-            <div class="project-tags"><span>Flutter</span><span>LLM Backend</span><span>Offline-first</span><span>Clean Architecture</span></div>
           </article>
-          <article class="project-card">
-            <div class="project-topline">
-              <span>Research</span>
-              <span>Federated Learning</span>
+          <article class="skill-card">
+            <h3>Backend &amp; web</h3>
+            <div class="chip-list">
+              <span>FastAPI</span><span>Express.js</span><span>Next.js</span><span>React</span><span>Streamlit</span><span>REST design</span><span>Jetpack Compose</span><span>Flutter</span>
             </div>
-            <h3>Plant Disease Detection</h3>
-            <p>
-              Federated learning research for plant disease detection using distributed training strategies such as FedAvg,
-              FedProx, SCAFFOLD, FedMA, and FedOpt. The work focuses on model performance, client collaboration, and
-              privacy-conscious learning without centralizing raw data.
-            </p>
-            <div class="project-tags"><span>FedAvg</span><span>FedProx</span><span>SCAFFOLD</span><span>Computer Vision</span></div>
           </article>
-          <article class="project-card">
-            <div class="project-topline">
-              <span>Software</span>
-              <span>Offline Sync</span>
+          <article class="skill-card">
+            <h3>Data &amp; storage</h3>
+            <div class="chip-list">
+              <span>PostgreSQL</span><span>MySQL</span><span>SQLite</span><span>FAISS</span><span>ChromaDB</span><span>Neo4j</span><span>Firestore</span><span>Pandas</span><span>NumPy</span>
             </div>
-            <h3>Loan Management System</h3>
-            <p>
-              Desktop and Android synchronized software with offline support for managing loan workflows. The system is
-              designed around reliable local usage, data synchronization, structured records, and practical business operations.
-            </p>
-            <div class="project-tags"><span>Android</span><span>Desktop</span><span>Synchronization</span><span>Business Software</span></div>
           </article>
-          <article class="project-card">
-            <div class="project-topline">
-              <span>Full Stack</span>
-              <span>Healthcare</span>
+          <article class="skill-card">
+            <h3>Infrastructure</h3>
+            <div class="chip-list">
+              <span>Docker</span><span>GitHub Actions</span><span>Linux</span><span>PBS / HPC</span><span>Ollama</span><span>vLLM</span><span>Supabase</span><span>Nginx</span>
             </div>
-            <h3>Hospital Management System</h3>
-            <p>
-              A management system covering patients, doctors, appointments, billing, and medical records. The project
-              demonstrates database design, administrative workflows, and CRUD-heavy software for a real operational domain.
-            </p>
-            <div class="project-tags"><span>Database</span><span>Healthcare</span><span>PHP</span><span>MySQL</span></div>
           </article>
-          <article class="project-card">
-            <div class="project-topline">
-              <span>Machine Learning</span>
-              <span>Regression</span>
+          <article class="skill-card">
+            <h3>Core CS</h3>
+            <div class="chip-list">
+              <span>Data structures</span><span>Algorithms</span><span>Operating systems</span><span>DBMS</span><span>Computer networks</span><span>System design</span>
             </div>
-            <h3>Car Price Prediction</h3>
-            <p>
-              Regression-based machine learning model for estimating car prices from structured features. The project covers
-              data cleaning, exploratory analysis, feature preparation, model training, and prediction evaluation.
-            </p>
-            <div class="project-tags"><span>Python</span><span>Scikit-learn</span><span>Regression</span><span>EDA</span></div>
           </article>
-          <article class="project-card">
-            <div class="project-topline">
-              <span>Data Analytics</span>
-              <span>Python</span>
-            </div>
-            <h3>Olympic Data Analysis</h3>
-            <p>
-              Python analytics project exploring Olympic data trends, country performance, athlete participation, medal
-              distribution, and historical patterns through analysis-ready datasets and visual interpretation.
-            </p>
-            <div class="project-tags"><span>Pandas</span><span>NumPy</span><span>Visualization</span><span>Analytics</span></div>
+        </div>
+      </section>
+
+      <!-- ============================ ABOUT ============================ -->
+      <section id="about" class="section-shell two-column">
+        <div>
+          <p class="section-kicker">About</p>
+          <h2>Systems first, models second.</h2>
+        </div>
+        <div class="section-text">
+          <p>
+            I am an M.Tech Data Analytics student at Dr. B. R. Ambedkar National Institute of Technology Jalandhar,
+            working on LLM agents, selective prediction, federated learning and enterprise AI.
+          </p>
+          <p>
+            What I care about is the whole path from a model to something a person can rely on: the retrieval layer,
+            the routing policy, the evaluation harness that tells you it actually got better, the installer that puts
+            it on a shop owner's desktop. A model that scores well in a notebook and a system someone trusts with
+            their business are very different artefacts, and the gap between them is where I like to work.
+          </p>
+          <p>
+            I also make a point of shipping unglamorous software. The loan management system in the work section runs
+            a real finance business every day, offline, on one computer &mdash; and building it taught me more about
+            correctness than any benchmark has.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-shell timeline-section">
+        <div class="section-heading">
+          <p class="section-kicker">Education &amp; experience</p>
+          <h2>Academic depth, delivery experience.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <p class="timeline-date">2025 &ndash; Present</p>
+            <h3>M.Tech, Data Analytics</h3>
+            <p>NIT Jalandhar. Agentic AI, selective prediction, federated learning, RAG and efficient inference.</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <p class="timeline-date">Jan &ndash; Jun 2025</p>
+            <h3>ML Engineer Intern</h3>
+            <p>ThinkNEXT Technologies, Mohali. Built AI product features end to end and the backend services that served them. Awarded a Pre-Placement Offer.</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <p class="timeline-date">Jun &ndash; Jul 2023</p>
+            <h3>Software Development Intern</h3>
+            <p>Infowiz, Mohali. Backend modules for a hospital management system in PHP and MySQL, with role-based auth.</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <p class="timeline-date">2021 &ndash; 2025</p>
+            <h3>B.Tech, Computer Science</h3>
+            <p>Giani Zail Singh Campus College of Engineering &amp; Technology, Bathinda. CGPA 7.85.</p>
           </article>
         </div>
       </section>
@@ -299,49 +670,52 @@
       <section class="section-shell achievement-grid">
         <article>
           <p class="section-kicker">Achievements</p>
-          <h2>Signals employers care about.</h2>
+          <h2>Track record.</h2>
         </article>
         <article class="achievement-card">
-          <strong>GATE CS Qualified</strong>
-          <span>Competitive foundation in core computer science.</span>
+          <strong>GATE CS/IT &times;3</strong>
+          <span>Qualified in three consecutive years &mdash; 2024, 2025 and 2026.</span>
         </article>
         <article class="achievement-card">
-          <strong>NIT Jalandhar</strong>
-          <span>M.Tech Data Analytics, 2025-2027.</span>
+          <strong>Pre-Placement Offer</strong>
+          <span>Awarded during the ML engineering internship at ThinkNEXT Technologies.</span>
         </article>
         <article class="achievement-card">
-          <strong>AI/ML Portfolio</strong>
-          <span>Projects across agents, federated learning, regression, analytics, and software systems.</span>
+          <strong>Published review paper</strong>
+          <span>Federated learning for plant disease detection, surveying privacy-preserving algorithms.</span>
+        </article>
+        <article class="achievement-card">
+          <strong>Software in production</strong>
+          <span>A loan management system in daily use by a small finance business.</span>
+        </article>
+        <article class="achievement-card">
+          <strong>Merit scholarship</strong>
+          <span>Senior Secondary Residential School for Meritorious Students, Bathinda.</span>
         </article>
       </section>
 
+      <!-- ============================ CONTACT ============================ -->
       <section id="contact" class="section-shell contact-section">
         <div>
           <p class="section-kicker">Contact</p>
-          <h2>Open to AI/ML internships, research collaborations, and applied AI roles.</h2>
+          <h2>Open to AI/ML roles and research collaboration.</h2>
           <p class="section-text">
-            I am especially interested in LLM agents, enterprise AI, local AI deployment, federated learning, and AI
-            infrastructure. Social links are placeholder icons for now and ready for your real URLs.
+            Particularly interested in agentic systems, retrieval infrastructure, selective prediction and local AI
+            deployment. Happy to talk about any of the work above.
           </p>
         </div>
         <div class="contact-card">
-          <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a>
-          <a href="tel:YOUR_PHONE">YOUR_PHONE</a>
+          <a href="mailto:lovepreetsharma828sharma@gmail.com">lovepreetsharma828sharma@gmail.com</a>
+          <a href="tel:+917053600034">+91 70536 00034</a>
           <div class="social-row" aria-label="Social links">
-            <a href="#" aria-label="GitHub">
+            <a href="https://github.com/lovepreet-dev-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.1-1.5 6.1-6.5a5 5 0 0 0-1.4-3.5 4.7 4.7 0 0 0-.1-3.5s-1.1-.3-3.7 1.4a12.7 12.7 0 0 0-6.7 0C6.7.7 5.6 1 5.6 1a4.7 4.7 0 0 0-.1 3.5A5 5 0 0 0 4.1 8c0 5 3.1 6.2 6.1 6.5a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
             </a>
-            <a href="#" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/lovepreet-sharma-65734021b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
-            <a href="#" aria-label="Google Scholar">
-              <svg viewBox="0 0 24 24"><path d="M12 3 2 9l10 6 10-6-10-6z"/><path d="M6 12v5c0 2 3 4 6 4s6-2 6-4v-5"/></svg>
-            </a>
-            <a href="#" aria-label="Kaggle">
-              <svg viewBox="0 0 24 24"><path d="M7 3v18M17 3l-8 8 8 10"/></svg>
-            </a>
-            <a href="#" aria-label="Hugging Face">
-              <svg viewBox="0 0 24 24"><circle cx="8" cy="10" r="1.5"/><circle cx="16" cy="10" r="1.5"/><path d="M7 15c2 2 8 2 10 0M4 12c0-5 3-8 8-8s8 3 8 8-3 8-8 8-8-3-8-8z"/></svg>
+            <a href="mailto:lovepreetsharma828sharma@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
             </a>
           </div>
         </div>
@@ -349,9 +723,15 @@
     </main>
 
     <footer class="site-footer">
-      <span>Lovepreet Sharma</span>
-      <span>AI Research Engineer in progress</span>
+      <span>&copy; <span id="year">2026</span> Lovepreet Sharma</span>
+      <span>Built from scratch &mdash; no framework, no build step.</span>
     </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close image">&times;</button>
+      <img id="lightboxImg" src="" alt="">
+    </div>
 
     <script src="script.js"></script>
   </body>
