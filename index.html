@@ -284,17 +284,18 @@
               <h3>PlanRemind &mdash; complete exam plans, scheduled for real life</h3>
               <p>
                 A native Android planner that turns an exam, timeline, subject strengths and available hours into a
-                complete day-by-day study schedule. Twelve curated exam syllabi can be planned locally; other exams
-                use a guarded AI generation path, while Room keeps the plan and progress available offline.
+                complete day-by-day study schedule. Twenty-two built-in exam syllabi can be planned entirely without
+                AI, while Room keeps every plan, session and progress update available offline.
               </p>
               <ul class="metric-list">
-                <li><strong>Gap-free plans from 7 to 365 days</strong> &mdash; deterministic scheduling owns dates and time slots, while AI is limited to choosing useful content</li>
-                <li><strong>Long-plan safe</strong> &mdash; self-chaining background generation and a rolling 14-day reminder window avoid Android worker and alarm limits</li>
-                <li><strong>Private by design</strong> &mdash; plans, sessions and progress live in Room; API keys stay behind a validating Supabase Edge Function</li>
+                <li><strong>22 exams, no AI required</strong> &mdash; curated syllabi make plan creation fast, predictable and usable without sending study details to a model</li>
+                <li><strong>Gap-free plans from 7 to 365 days</strong> &mdash; deterministic scheduling distributes topics across the learner's real availability</li>
+                <li><strong>Reminder-safe</strong> &mdash; a rolling 14-day scheduling window avoids Android alarm limits while keeping upcoming sessions covered</li>
+                <li><strong>Feedback-led roadmap</strong> &mdash; the AI-assisted planning code is currently disabled and will only be enabled in future if users ask for it</li>
                 <li>Material 3 screens for Home, Today, Plan, Calendar and Analytics, with streaks, subject progress and actionable reminders</li>
               </ul>
               <div class="project-tags">
-                <span>Kotlin</span><span>Jetpack Compose</span><span>Room</span><span>Supabase</span><span>OpenRouter</span>
+                <span>Kotlin</span><span>Jetpack Compose</span><span>Room</span><span>WorkManager</span><span>Offline-first</span>
               </div>
             </div>
           </article>
