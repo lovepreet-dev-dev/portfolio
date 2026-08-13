@@ -552,6 +552,35 @@ h3 {
 
 .shot img:hover { border-color: var(--rule-strong); }
 
+.shot-video video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--rule);
+  background: var(--ink);
+  object-fit: cover;
+}
+
+.phone-shot-strip {
+  display: grid;
+  grid-auto-columns: minmax(170px, 28%);
+  grid-auto-flow: column;
+  gap: 14px;
+  padding: 0 0 14px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scrollbar-color: var(--rule-strong) transparent;
+  scrollbar-width: thin;
+}
+
+.phone-shot-strip img {
+  max-height: none;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
+
 .shot--fit img { padding: 12px; }
 
 .shot-duo {
@@ -1028,6 +1057,8 @@ svg {
   .project-body, .shot { grid-column: 1; }
   .shot { order: 0; margin-bottom: 26px; }
   .shot-duo { grid-template-columns: 1fr; }
+
+  .phone-shot-strip { grid-auto-columns: minmax(150px, 58%); }
 
   .skill-card h3 { margin-bottom: 10px; }
 
