@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlanRemind — complete exam plans, scheduled for real life</title>
+<meta name="description" content="PlanRemind is a native Android study planner that turns an exam, timeline and available hours into a day-by-day schedule — fully offline. Project details, privacy policy and terms.">
+<style>
+  :root { color-scheme: light dark; --ink:#16211b; --muted:#5d6b63; --line:#dfe6e1;
+          --bg:#ffffff; --accent:#00a846; --code:#f2f5f3; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8efea; --muted:#9fb0a6; --line:#26302a; --bg:#111613; --code:#1a211d; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 22px 96px; }
+  .crumb { font-size:.85rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted);
+           text-decoration:none; display:inline-block; margin-bottom:32px; }
+  .crumb:hover { color: var(--accent); }
+  h1 { font-size: 2rem; line-height:1.2; margin:0 0 .4em; letter-spacing:-.02em; }
+  .meta { color:var(--muted); font-size:.95rem; margin:.15em 0; }
+  .tagrow { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0 0; }
+  .tag { border:1px solid var(--line); border-radius:999px; padding:4px 12px;
+         font-size:.75rem; letter-spacing:.06em; color:var(--muted); }
+  h2 { font-size: 1.22rem; margin:2.4em 0 .6em; letter-spacing:-.01em; }
+  p, li { color: var(--ink); }
+  a { color: var(--accent); }
+  hr { border:0; border-top:1px solid var(--line); margin:2.2em 0; }
+  ul { padding-left: 1.25em; }
+  li + li { margin-top: .45em; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px;
+           margin-top:18px; }
+  .card { border:1px solid var(--line); border-radius:10px; padding:18px 20px;
+          text-decoration:none; color:inherit; transition:border-color 160ms ease; }
+  .card:hover { border-color: var(--accent); }
+  .card strong { display:block; margin-bottom:4px; }
+  .card span { color:var(--muted); font-size:.92rem; }
+  .shots { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:24px 0 0; }
+  .shots img { width:100%; height:auto; border-radius:10px; border:1px solid var(--line); }
+  @media (max-width:560px) { .shots { grid-template-columns:repeat(2,1fr); } }
+</style>
+</head>
+<body><main>
+
+<a class="crumb" href="../">&larr; Back to portfolio</a>
+
+<h1>PlanRemind</h1>
+<p class="meta">Native Android app &middot; Kotlin &middot; Jetpack Compose &middot; version 1.0.0 &middot; released by Lovepreet Sharma</p>
+
+<div class="tagrow">
+  <span class="tag">Kotlin</span>
+  <span class="tag">Jetpack Compose</span>
+  <span class="tag">Room</span>
+  <span class="tag">WorkManager</span>
+  <span class="tag">Offline-first</span>
+</div>
+
+<p>
+  PlanRemind turns an exam, a timeline, your subject strengths and the hours you actually
+  have free into a complete day-by-day study schedule — then reminds you when each session
+  starts. Twenty-two built-in exam syllabi can be planned entirely without AI, and Room keeps
+  every plan, session and progress update available offline.
+</p>
+
+<div class="shots">
+  <img src="../assets/shots/planremind-01_home.webp" alt="PlanRemind home screen showing a study plan, today's progress and upcoming sessions." loading="lazy" decoding="async">
+  <img src="../assets/shots/planremind-03_plan.webp" alt="PlanRemind plan screen listing study sessions by day with subjects, durations and completion controls." loading="lazy" decoding="async">
+  <img src="../assets/shots/planremind-04_reminder.webp" alt="PlanRemind study reminder showing the next scheduled topic and actions to begin or snooze." loading="lazy" decoding="async">
+</div>
+
+<h2>Highlights</h2>
+<ul>
+  <li><strong>22 exams, no AI required</strong> — curated syllabi make plan creation fast, predictable and usable without sending study details anywhere.</li>
+  <li><strong>Gap-free plans from 7 to 365 days</strong> — deterministic scheduling distributes topics across your real availability.</li>
+  <li><strong>Reminder-safe</strong> — a rolling 14-day scheduling window avoids Android alarm limits while keeping upcoming sessions covered.</li>
+  <li><strong>Fully offline in 1.0</strong> — no account, no tracking, no analytics. Your plan never leaves your device.</li>
+</ul>
+
+<h2>Policies</h2>
+<p class="meta">Required disclosures for the Google Play listing:</p>
+<div class="cards">
+  <a class="card" href="privacy-policy.html">
+    <strong>Privacy Policy</strong>
+    <span>What data PlanRemind collects (none), what stays on your device, and your rights. Effective August 26, 2026.</span>
+  </a>
+  <a class="card" href="terms-of-service.html">
+    <strong>Terms of Service</strong>
+    <span>The plain-English agreement for using PlanRemind, including how study plans should be used. Effective August 26, 2026.</span>
+  </a>
+</div>
+
+<hr>
+<p class="meta">Questions? Contact Lovepreet Sharma at joshibidowali123@gmail.com</p>
+
+</main></body>
+</html>
