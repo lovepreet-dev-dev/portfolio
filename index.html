@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="day">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,42 +7,113 @@
       name="description"
       content="Lovepreet Sharma - AI/ML engineer and software developer. Creator of Learn Visually, production software, retrieval platforms, Android and desktop apps."
     >
-    <meta name="theme-color" content="#f7f4ed">
+    <meta name="theme-color" content="#fbf5ea">
     <title>Lovepreet Sharma | AI/ML Engineer</title>
-    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="%23191512"/><text x="32" y="42" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="%23f7f4ed">LS</text></svg>'>
+    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="13" fill="%23e08a34"/><g stroke="%23e08a34" stroke-width="5" stroke-linecap="round"><path d="M32 7v7M32 50v7M7 32h7M50 32h7M14 14l5 5M45 45l5 5M50 14l-5 5M19 45l-5 5"/></g></svg>'>
+
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dusk" : "day");
+          var root = document.documentElement;
+          root.setAttribute("data-theme", theme);
+          root.setAttribute("data-theme-ready", "");
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "day");
+        }
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&display=swap"
+    >
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Lovepreet Sharma home">
-        <span class="brand-mark">LS</span>
-        <span class="brand-name">Lovepreet Sharma</span>
-      </a>
-      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#stack">Stack</a>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
+    <!-- ---------- ambient layers ---------- -->
+    <div class="aurora" aria-hidden="true">
+      <span class="aurora-orb aurora-orb--a"></span>
+      <span class="aurora-orb aurora-orb--b"></span>
+      <span class="aurora-orb aurora-orb--c"></span>
+    </div>
+    <div class="pointer-light" id="pointerLight" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="nav-shell">
+        <a class="brand" href="#top" aria-label="Lovepreet Sharma home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.4v2.6M12 19v2.6M2.4 12h2.6M19 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M18.8 5.2l-1.9 1.9M7.1 16.9l-1.9 1.9"/></svg>
+          </span>
+          <span class="brand-name">Lovepreet Sharma</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+          <a href="#work">Work</a>
+          <a href="#stack">Stack</a>
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-tools">
+          <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to night theme">
+            <span class="theme-toggle__icons" aria-hidden="true">
+              <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.2v2.6M12 19.2v2.6M2.2 12h2.6M19.2 12h2.6M5 5l1.9 1.9M17.1 17.1 19 19M19 5l-1.9 1.9M6.9 17.1 5 19"/></svg>
+              <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+            </span>
+          </button>
+
+          <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
     </header>
 
     <main id="main">
-      <section class="hero section-shell" id="top">
-        <div class="hero-copy">
+      <!-- ============================ HERO ============================ -->
+      <section class="hero" id="top">
+        <div class="hero-sky" aria-hidden="true">
+          <span class="god-rays"></span>
+        </div>
+
+        <div class="hero-inner">
+          <figure class="sun-medallion" data-tilt-soft>
+            <span class="sun-rays" aria-hidden="true"></span>
+            <span class="sun-rings" aria-hidden="true"></span>
+            <span class="sun-halo" aria-hidden="true"></span>
+            <span class="sun-disc">
+              <img
+                class="sun-face"
+                src="assets/lovepreet-portrait.webp"
+                alt="Portrait of Lovepreet Sharma"
+                width="640" height="800" fetchpriority="high" decoding="async"
+              >
+            </span>
+            <span class="sun-orbit" aria-hidden="true"></span>
+            <figcaption class="sun-caption">Lovepreet Sharma <i>/</i> AI/ML engineer</figcaption>
+          </figure>
+
           <p class="eyebrow"><span class="pulse-dot"></span> M.Tech Data Analytics &middot; NIT Jalandhar</p>
-          <h1>Lovepreet<br>Sharma</h1>
-          <p class="hero-role">I build software people actually <em>use</em>.</p>
+
+          <h1 class="hero-name" data-sweep>Lovepreet<br>Sharma</h1>
+
+          <p class="hero-role" data-split="words">I build software people actually <em>use</em>.</p>
+
           <p class="hero-text">
             AI/ML engineer and software developer. I take products all the way &mdash; a loan system that runs a finance
             business offline every day, a retrieval platform that answers with citations, an Android app backed by an
             LLM. Backend, frontend, model and installer, shipped as one working thing.
           </p>
+
           <div class="hero-actions">
             <a class="button primary" href="#work">View work</a>
             <a class="button secondary" href="resume.pdf" download="Lovepreet-Sharma-Resume.pdf">
@@ -52,18 +123,18 @@
             <a class="button secondary" href="#contact">Get in touch</a>
           </div>
 
-          <dl class="hero-stats">
-            <div>
+          <dl class="hero-stats" data-reveal-group>
+            <div data-reveal>
               <dt>In production</dt>
               <dd><span class="stat-num">Daily use</span></dd>
               <dd class="stat-note">A finance business runs on software I built and shipped</dd>
             </div>
-            <div>
+            <div data-reveal>
               <dt>Built end to end</dt>
               <dd><span class="stat-num">17 projects</span></dd>
               <dd class="stat-note">Backend, frontend, mobile, ML and packaging</dd>
             </div>
-            <div>
+            <div data-reveal>
               <dt>GATE CS/IT qualified</dt>
               <dd><span class="stat-num">3&times;</span></dd>
               <dd class="stat-note">2024, 2025 and 2026</dd>
@@ -71,51 +142,58 @@
           </dl>
         </div>
 
-        <figure class="hero-visual">
-          <div class="hero-portrait-frame">
-            <img
-              class="hero-portrait"
-              src="assets/lovepreet-portrait.webp"
-              alt="Portrait of Lovepreet Sharma"
-              width="640" height="800" fetchpriority="high" decoding="async"
-            >
-          </div>
-          <figcaption>Lovepreet Sharma <span>/</span> AI/ML engineer</figcaption>
-        </figure>
-
-        <aside class="hero-panel" aria-label="Current focus">
-          <div class="signal-card">
-            <span class="pulse"></span>
-            <p>Shipped &amp; running</p>
-            <h2>Loan Manager</h2>
-            <p class="signal-sub">
-              A fully offline loan back-office a small finance company opens every morning &mdash; four interest
-              models, printable receipts, one-click backup, packaged as a Windows installer.
-            </p>
-          </div>
-          <div class="model-stack">
-            <span>Full-stack delivery</span>
-            <span>LLM applications</span>
-            <span>RAG pipelines</span>
-            <span>Offline-first apps</span>
-            <span>Android &amp; desktop</span>
-            <span>CI/CD &amp; packaging</span>
-          </div>
-        </aside>
+        <a class="scroll-cue" href="#work" aria-label="Scroll to work">
+          <span>Scroll</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
       </section>
+
+      <!-- ============================ SIGNAL BAND ============================ -->
+      <aside class="signal-band" aria-label="Current focus">
+        <div class="signal-card glass" data-reveal>
+          <span class="pulse" aria-hidden="true"></span>
+          <p class="signal-label">Shipped &amp; running</p>
+          <h2>Loan Manager</h2>
+          <p class="signal-sub">
+            A fully offline loan back-office a small finance company opens every morning &mdash; four interest
+            models, printable receipts, one-click backup, packaged as a Windows installer.
+          </p>
+        </div>
+
+        <div class="marquee" aria-label="Areas of focus">
+          <div class="marquee-track">
+            <div class="marquee-group">
+              <span>Full-stack delivery</span><i aria-hidden="true">&#10022;</i>
+              <span>LLM applications</span><i aria-hidden="true">&#10022;</i>
+              <span>RAG pipelines</span><i aria-hidden="true">&#10022;</i>
+              <span>Offline-first apps</span><i aria-hidden="true">&#10022;</i>
+              <span>Android &amp; desktop</span><i aria-hidden="true">&#10022;</i>
+              <span>CI/CD &amp; packaging</span><i aria-hidden="true">&#10022;</i>
+            </div>
+            <div class="marquee-group" aria-hidden="true">
+              <span>Full-stack delivery</span><i>&#10022;</i>
+              <span>LLM applications</span><i>&#10022;</i>
+              <span>RAG pipelines</span><i>&#10022;</i>
+              <span>Offline-first apps</span><i>&#10022;</i>
+              <span>Android &amp; desktop</span><i>&#10022;</i>
+              <span>CI/CD &amp; packaging</span><i>&#10022;</i>
+            </div>
+          </div>
+        </div>
+      </aside>
 
       <!-- ============================ WORK ============================ -->
       <section id="work" class="section-shell">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <p class="section-kicker">Selected work</p>
-          <h2>Seventeen projects, built end to end.</h2>
+          <h2 data-split="words">Seventeen projects, built end to end.</h2>
           <p class="section-text">
             Shipped products first, research further down. Everything here is code I wrote and ran, and every
             screenshot is captured from the application actually running &mdash; not a mockup.
           </p>
         </div>
 
-        <div class="filter-bar" role="tablist" aria-label="Filter projects">
+        <div class="filter-bar" role="tablist" aria-label="Filter projects" data-reveal>
           <button class="filter is-active" type="button" role="tab" aria-selected="true" data-filter="all">All</button>
           <button class="filter" type="button" role="tab" aria-selected="false" data-filter="research">Research</button>
           <button class="filter" type="button" role="tab" aria-selected="false" data-filter="systems">AI systems</button>
@@ -126,7 +204,7 @@
         <div class="project-grid" id="projectGrid">
 
           <!-- 1. Learn Visually -->
-          <article class="project-card is-wide" data-cat="product tools">
+          <article class="project-card is-wide" data-cat="product tools" data-tilt>
             <figure class="shot shot-video">
               <video
                 controls
@@ -168,7 +246,7 @@
           </article>
 
           <!-- 2. DineDirect -->
-          <article class="project-card is-wide" data-cat="product systems">
+          <article class="project-card is-wide" data-cat="product systems" data-tilt>
             <figure class="shot shot-duo">
               <img
                 src="assets/shots/dinedirect-site.webp"
@@ -207,7 +285,7 @@
           </article>
 
           <!-- 3. Loan Manager -->
-          <article class="project-card is-wide" data-cat="product">
+          <article class="project-card is-wide" data-cat="product" data-tilt>
             <figure class="shot shot-duo">
               <img
                 src="assets/shots/loan-manager.webp"
@@ -245,7 +323,7 @@
           </article>
 
           <!-- 4. ModelArena -->
-          <article class="project-card is-wide" data-cat="product tools">
+          <article class="project-card is-wide" data-cat="product tools" data-tilt>
             <figure class="shot shot-duo">
               <img
                 src="assets/shots/modelarena-home.webp"
@@ -283,7 +361,7 @@
           </article>
 
           <!-- 5. Kundli -->
-          <article class="project-card" data-cat="product systems">
+          <article class="project-card" data-cat="product systems" data-tilt>
             <figure class="shot">
               <img
                 src="assets/shots/kundli.webp"
@@ -315,7 +393,7 @@
           </article>
 
           <!-- 6. RAG Engine -->
-          <article class="project-card" data-cat="systems">
+          <article class="project-card" data-cat="systems" data-tilt>
             <figure class="shot shot--fit">
               <img
                 src="assets/shots/rag-login.webp"
@@ -349,7 +427,7 @@
           </article>
 
           <!-- 7. PlanRemind -->
-          <article class="project-card is-wide" data-cat="product systems">
+          <article class="project-card is-wide" data-cat="product systems" data-tilt>
             <figure class="shot shot-phone-gallery">
               <div class="phone-shot-strip" aria-label="PlanRemind app screenshots">
                 <img src="assets/shots/planremind-01_home.webp" alt="PlanRemind home screen showing a 92-topic study plan, today's progress and upcoming sessions." width="720" height="1280" loading="lazy" decoding="async">
@@ -389,7 +467,7 @@
           </article>
 
           <!-- 8. Kinship -->
-          <article class="project-card" data-cat="product">
+          <article class="project-card" data-cat="product" data-tilt>
             <figure class="shot">
               <img
                 src="assets/shots/kinship.webp"
@@ -424,7 +502,7 @@
           </article>
 
           <!-- 9. Loan Manager Cloud Sync Suite -->
-          <article class="project-card is-text" data-cat="product systems">
+          <article class="project-card is-text" data-cat="product systems" data-tilt>
             <div class="project-body">
               <div class="project-topline">
                 <span class="tag-role">Distributed system</span>
@@ -448,7 +526,7 @@
           </article>
 
           <!-- 10. Crowd Voice -->
-          <article class="project-card" data-cat="tools systems">
+          <article class="project-card" data-cat="tools systems" data-tilt>
             <figure class="shot">
               <img
                 src="assets/shots/crowdvoice.webp"
@@ -477,7 +555,7 @@
           </article>
 
           <!-- 11. Attendance Analyzer -->
-          <article class="project-card" data-cat="tools">
+          <article class="project-card" data-cat="tools" data-tilt>
             <figure class="shot">
               <img
                 src="assets/shots/attendance.webp"
@@ -507,7 +585,7 @@
           </article>
 
           <!-- 12. Twitter influencer graph analysis -->
-          <article class="project-card" data-cat="tools">
+          <article class="project-card" data-cat="tools" data-tilt>
             <figure class="shot shot--fit">
               <img
                 src="assets/shots/graph-network.webp"
@@ -536,7 +614,7 @@
           </article>
 
           <!-- 13. Hospital Management System -->
-          <article class="project-card is-text" data-cat="product">
+          <article class="project-card is-text" data-cat="product" data-tilt>
             <div class="project-body">
               <div class="project-topline">
                 <span class="tag-role">Internship work</span>
@@ -558,7 +636,7 @@
           </article>
 
           <!-- 14. AgriShift-Sentinel -->
-          <article class="project-card" data-cat="research systems">
+          <article class="project-card" data-cat="research systems" data-tilt>
             <figure class="shot shot--fit">
               <img
                 src="assets/shots/agentic-eval.webp"
@@ -597,7 +675,7 @@
           </article>
 
           <!-- 15. CASSIA -->
-          <article class="project-card" data-cat="research">
+          <article class="project-card" data-cat="research" data-tilt>
             <figure class="shot shot--fit">
               <img
                 src="assets/shots/cassia-budget.webp"
@@ -629,7 +707,7 @@
           </article>
 
           <!-- 16. FedCEA -->
-          <article class="project-card" data-cat="research">
+          <article class="project-card" data-cat="research" data-tilt>
             <figure class="shot shot--fit">
               <img
                 src="assets/shots/fedcea-accuracy.webp"
@@ -660,7 +738,7 @@
           </article>
 
           <!-- 17. Federated learning for plant disease detection -->
-          <article class="project-card is-text" data-cat="research">
+          <article class="project-card is-text" data-cat="research" data-tilt>
             <div class="project-body">
               <div class="project-topline">
                 <span class="tag-role">Research</span>
@@ -688,15 +766,32 @@
         <p class="empty-state" id="emptyState" hidden>No projects in this category.</p>
       </section>
 
+      <!-- ============================ MARQUEE ============================ -->
+      <div class="ribbon" aria-hidden="true">
+        <div class="ribbon-track">
+          <span>AI / ML engineering</span><i>&#10022;</i>
+          <span>Full-stack delivery</span><i>&#10022;</i>
+          <span>RAG &amp; retrieval</span><i>&#10022;</i>
+          <span>Multi-agent systems</span><i>&#10022;</i>
+          <span>Android &amp; desktop</span><i>&#10022;</i>
+          <span>Federated learning</span><i>&#10022;</i>
+          <span>AI / ML engineering</span><i>&#10022;</i>
+          <span>Full-stack delivery</span><i>&#10022;</i>
+          <span>RAG &amp; retrieval</span><i>&#10022;</i>
+          <span>Multi-agent systems</span><i>&#10022;</i>
+          <span>Android &amp; desktop</span><i>&#10022;</i>
+          <span>Federated learning</span><i>&#10022;</i>
+        </div>
+      </div>
 
       <!-- ============================ STACK ============================ -->
       <section id="stack" class="section-shell">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <p class="section-kicker">Stack</p>
-          <h2>What I reach for.</h2>
+          <h2 data-split="words">What I reach for.</h2>
         </div>
-        <div class="skills-grid">
-          <article class="skill-card featured">
+        <div class="bento skills-grid">
+          <article class="skill-card glass featured" data-reveal>
             <h3>AI &amp; machine learning</h3>
             <div class="chip-list">
               <span>PyTorch</span><span>TensorFlow</span><span>Scikit-learn</span><span>LangChain</span><span>LangGraph</span>
@@ -704,31 +799,31 @@
               <span>Computer vision</span><span>NLP</span><span>Conformal prediction</span><span>Model evaluation</span>
             </div>
           </article>
-          <article class="skill-card">
+          <article class="skill-card glass" data-reveal>
             <h3>Languages</h3>
             <div class="chip-list">
               <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>Kotlin</span><span>Java</span><span>C++</span><span>C</span><span>SQL</span><span>PHP</span>
             </div>
           </article>
-          <article class="skill-card">
+          <article class="skill-card glass" data-reveal>
             <h3>Backend &amp; web</h3>
             <div class="chip-list">
               <span>FastAPI</span><span>Express.js</span><span>Next.js</span><span>React</span><span>Tailwind CSS</span><span>Prisma</span><span>Streamlit</span><span>REST design</span><span>Jetpack Compose</span><span>Flutter</span>
             </div>
           </article>
-          <article class="skill-card">
+          <article class="skill-card glass" data-reveal>
             <h3>Data &amp; storage</h3>
             <div class="chip-list">
               <span>PostgreSQL</span><span>MySQL</span><span>SQLite</span><span>FAISS</span><span>ChromaDB</span><span>Neo4j</span><span>Firestore</span><span>Pandas</span><span>NumPy</span>
             </div>
           </article>
-          <article class="skill-card">
+          <article class="skill-card glass" data-reveal>
             <h3>Infrastructure</h3>
             <div class="chip-list">
               <span>Docker</span><span>GitHub Actions</span><span>Linux</span><span>PBS / HPC</span><span>Ollama</span><span>vLLM</span><span>Supabase</span><span>Vercel</span><span>Render</span><span>Nginx</span>
             </div>
           </article>
-          <article class="skill-card">
+          <article class="skill-card glass" data-reveal>
             <h3>Core CS</h3>
             <div class="chip-list">
               <span>Data structures</span><span>Algorithms</span><span>Operating systems</span><span>DBMS</span><span>Computer networks</span><span>System design</span>
@@ -739,11 +834,12 @@
 
       <!-- ============================ ABOUT ============================ -->
       <section id="about" class="section-shell two-column">
-        <div>
+        <div data-reveal>
           <p class="section-kicker">About</p>
-          <h2>I like finishing things.</h2>
+          <h2 data-split="words">I like finishing things.</h2>
+          <span class="quote-glyph" aria-hidden="true">&#10077;</span>
         </div>
-        <div class="section-text">
+        <div class="section-text" data-reveal>
           <p>
             I am an M.Tech Data Analytics student at Dr. B. R. Ambedkar National Institute of Technology Jalandhar,
             and a software developer who happens to work a lot with AI.
@@ -762,32 +858,33 @@
         </div>
       </section>
 
+      <!-- ============================ TIMELINE ============================ -->
       <section class="section-shell timeline-section">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <p class="section-kicker">Education &amp; experience</p>
-          <h2>Academic depth, delivery experience.</h2>
+          <h2 data-split="words">Academic depth, delivery experience.</h2>
         </div>
         <div class="timeline">
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
+          <article class="timeline-item" data-reveal>
+            <span class="timeline-dot" aria-hidden="true"></span>
             <p class="timeline-date">2025 &ndash; Present</p>
             <h3>M.Tech, Data Analytics</h3>
             <p>NIT Jalandhar. Agentic AI, selective prediction, federated learning, RAG and efficient inference.</p>
           </article>
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
+          <article class="timeline-item" data-reveal>
+            <span class="timeline-dot" aria-hidden="true"></span>
             <p class="timeline-date">Jan &ndash; Jun 2025</p>
             <h3>ML Engineer Intern</h3>
             <p>ThinkNEXT Technologies, Mohali. Built AI product features end to end and the backend services that served them. Awarded a Pre-Placement Offer.</p>
           </article>
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
+          <article class="timeline-item" data-reveal>
+            <span class="timeline-dot" aria-hidden="true"></span>
             <p class="timeline-date">Jun &ndash; Jul 2023</p>
             <h3>Software Development Intern</h3>
             <p>Infowiz, Mohali. Backend modules for a hospital management system in PHP and MySQL, with role-based auth.</p>
           </article>
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
+          <article class="timeline-item" data-reveal>
+            <span class="timeline-dot" aria-hidden="true"></span>
             <p class="timeline-date">2021 &ndash; 2025</p>
             <h3>B.Tech, Computer Science</h3>
             <p>Giani Zail Singh Campus College of Engineering &amp; Technology, Bathinda. CGPA 7.85.</p>
@@ -796,39 +893,39 @@
       </section>
 
       <!-- ============================ RESEARCH ============================ -->
-      <section id="research" class="section-shell research-band">
-        <div class="section-heading">
+      <section id="research" class="section-shell">
+        <div class="section-heading" data-reveal>
           <p class="section-kicker">Research interests</p>
-          <h2>What I read about after hours.</h2>
+          <h2 data-split="words">What I read about after hours.</h2>
           <p class="section-text">
             Building is the day job. These are the questions I keep circling back to, and they feed straight into the
             products &mdash; a system that knows when to stop and ask is a better product, not just a better paper.
             Somewhere down the line I would like to take these further.
           </p>
         </div>
-        <div class="research-grid">
-          <article>
+        <div class="bento research-grid">
+          <article class="glass" data-reveal>
             <span class="icon-circle" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
             </span>
             <h3>Agentic routing</h3>
             <p>Orchestrators that decide between answering, retrieving evidence, and escalating &mdash; and are evaluated on harmful-action rate, not just accuracy.</p>
           </article>
-          <article>
+          <article class="glass" data-reveal>
             <span class="icon-circle" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M3 17l5-6 4 4 5-8 4 5"/><path d="M3 21h18"/></svg>
             </span>
             <h3>Calibration &amp; conformal guards</h3>
             <p>Distribution-free thresholds that give a coverage guarantee, instead of a hand-tuned confidence cutoff that quietly fails off-distribution.</p>
           </article>
-          <article>
+          <article class="glass" data-reveal>
             <span class="icon-circle" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M6 17a4 4 0 1 1 2.65-7M18 17a4 4 0 1 0-2.65-7M8 13h8M12 9v8"/></svg>
             </span>
             <h3>Federated learning</h3>
             <p>FedAvg, FedProx, FedOpt, FedMA and SCAFFOLD under non-IID splits &mdash; what privacy actually costs in accuracy, convergence and communication.</p>
           </article>
-          <article>
+          <article class="glass" data-reveal>
             <span class="icon-circle" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M5 5h14v10H5zM8 19h8M12 15v4M9 9h6M9 12h4"/></svg>
             </span>
@@ -838,48 +935,51 @@
         </div>
       </section>
 
-      <section class="section-shell achievement-grid">
-        <article>
-          <p class="section-kicker">Achievements</p>
-          <h2>Track record.</h2>
-        </article>
-        <article class="achievement-card">
-          <strong>GATE CS/IT &times;3</strong>
-          <span>Qualified in three consecutive years &mdash; 2024, 2025 and 2026.</span>
-        </article>
-        <article class="achievement-card">
-          <strong>Pre-Placement Offer</strong>
-          <span>Awarded during the ML engineering internship at ThinkNEXT Technologies.</span>
-        </article>
-        <article class="achievement-card">
-          <strong>IEEE conference paper, accepted</strong>
-          <span><em>Agentic AI for Plant Disease Diagnosis: An Autonomous Multi-Agent Framework Integrating Vision, Retrieval, and Reasoning.</em></span>
-        </article>
-        <article class="achievement-card">
-          <strong>Federated learning paper, under review</strong>
-          <span>Federated learning for plant disease detection, surveying privacy-preserving algorithms.</span>
-        </article>
-        <article class="achievement-card">
-          <strong>Software in production</strong>
-          <span>A loan management system in daily use by a small finance business.</span>
-        </article>
-        <article class="achievement-card">
-          <strong>Merit scholarship</strong>
-          <span>Senior Secondary Residential School for Meritorious Students, Bathinda.</span>
-        </article>
+      <!-- ============================ ACHIEVEMENTS ============================ -->
+      <section class="section-shell">
+        <div class="bento achievement-grid">
+          <article class="achievement-lead" data-reveal>
+            <p class="section-kicker">Achievements</p>
+            <h2 data-split="words">Track record.</h2>
+          </article>
+          <article class="achievement-card glass" data-reveal>
+            <strong>GATE CS/IT &times;3</strong>
+            <span>Qualified in three consecutive years &mdash; 2024, 2025 and 2026.</span>
+          </article>
+          <article class="achievement-card glass" data-reveal>
+            <strong>Pre-Placement Offer</strong>
+            <span>Awarded during the ML engineering internship at ThinkNEXT Technologies.</span>
+          </article>
+          <article class="achievement-card glass" data-reveal>
+            <strong>IEEE conference paper, accepted</strong>
+            <span><em>Agentic AI for Plant Disease Diagnosis: An Autonomous Multi-Agent Framework Integrating Vision, Retrieval, and Reasoning.</em></span>
+          </article>
+          <article class="achievement-card glass" data-reveal>
+            <strong>Federated learning paper, under review</strong>
+            <span>Federated learning for plant disease detection, surveying privacy-preserving algorithms.</span>
+          </article>
+          <article class="achievement-card glass" data-reveal>
+            <strong>Software in production</strong>
+            <span>A loan management system in daily use by a small finance business.</span>
+          </article>
+          <article class="achievement-card glass" data-reveal>
+            <strong>Merit scholarship</strong>
+            <span>Senior Secondary Residential School for Meritorious Students, Bathinda.</span>
+          </article>
+        </div>
       </section>
 
       <!-- ============================ CONTACT ============================ -->
       <section id="contact" class="section-shell contact-section">
-        <div>
+        <div data-reveal>
           <p class="section-kicker">Contact</p>
-          <h2>Open to AI/ML, software engineering and full-stack roles.</h2>
+          <h2 data-split="words">Open to AI/ML, software engineering and full-stack roles.</h2>
           <p class="section-text">
             I am looking for a team where I can build and ship products end to end &mdash; AI/ML engineering, backend,
             or full-stack. Happy to talk about any of the work above, and glad to walk through the code.
           </p>
         </div>
-        <div class="contact-card">
+        <div class="contact-card glass" data-reveal>
           <a href="mailto:lovepreetsharma828sharma@gmail.com">lovepreetsharma828sharma@gmail.com</a>
           <a href="tel:+917053600034">+91 70536 00034</a>
           <a href="resume.pdf" download="Lovepreet-Sharma-Resume.pdf">Download resume (PDF)</a>
@@ -899,8 +999,11 @@
     </main>
 
     <footer class="site-footer">
-      <span>&copy; <span id="year">2026</span> Lovepreet Sharma</span>
-      <span>Built from scratch &mdash; no framework, no build step.</span>
+      <div class="horizon" aria-hidden="true"><span class="horizon-sun"></span></div>
+      <div class="footer-inner">
+        <span>&copy; <span id="year">2026</span> Lovepreet Sharma</span>
+        <span>Built from scratch &mdash; no framework, no build step.</span>
+      </div>
     </footer>
 
     <!-- Lightbox -->
