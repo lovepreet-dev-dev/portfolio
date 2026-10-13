@@ -1,6 +1,6 @@
 /* ================================================================== *
  * SOLAR DAWN — portfolio redesign
- * A dawn sky the content is lit by: sun medallion, light-swept name,
+ * A dawn sky the content is lit by: a pendant lamp, light-swept name,
  * glass panels, bento sections. Two themes (day / dusk).
  * Motion budget: transform + opacity only. Reduced-motion safe.
  * ================================================================== */
@@ -62,6 +62,17 @@
 
   --rule: rgba(30, 23, 18, 0.12);
   --rule-strong: rgba(30, 23, 18, 0.24);
+
+  /* pendant lamp — switched off by day */
+  --lamp-shade: #c2511c;
+  --lamp-shade-light: #e07a3a;
+  --lamp-shade-dark: #8a3510;
+  --lamp-metal: #3a2c22;
+  --lamp-inner: #6b2a0c;
+  --lamp-bulb: #efe3cf;
+  --lamp-cord: rgba(30, 23, 18, 0.55);
+  --lamp-wire: rgba(30, 23, 18, 0.7);
+  --lamp-light: 0;
 }
 
 /* dusk = night ----------------------------------------------------- */
@@ -105,6 +116,17 @@
 
   --rule: rgba(255, 255, 255, 0.12);
   --rule-strong: rgba(255, 255, 255, 0.26);
+
+  /* pendant lamp — switched on at dusk */
+  --lamp-shade: #b8501f;
+  --lamp-shade-light: #e48a46;
+  --lamp-shade-dark: #5e2610;
+  --lamp-metal: #2a2236;
+  --lamp-inner: #ffcf7a;
+  --lamp-bulb: #fff6d8;
+  --lamp-cord: rgba(245, 238, 222, 0.6);
+  --lamp-wire: rgba(245, 238, 222, 0.32);
+  --lamp-light: 1;
 }
 
 /* ---------------------------------------------------------- base */
@@ -254,7 +276,7 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.5rem); line-height: 1.16; }
 .chip-list span,
 .project-tags span,
 .stat-note,
-.sun-caption {
+.status-chip {
   font-family: var(--mono);
 }
 
@@ -418,7 +440,7 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.5rem); line-height: 1.16; }
   align-items: center;
   justify-content: center;
   min-height: 100svh;
-  padding: 150px 24px 110px;
+  padding: clamp(300px, 36vh, 340px) 24px 110px;
   overflow: hidden;
   text-align: center;
 }
@@ -434,20 +456,6 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.5rem); line-height: 1.16; }
   transition: background 0.6s var(--ease-soft);
 }
 
-.god-rays {
-  position: absolute;
-  top: -30%;
-  left: 50%;
-  width: 140%;
-  height: 140%;
-  transform: translateX(-50%);
-  background: repeating-conic-gradient(from 0deg at 50% 22%, var(--ray) 0deg 1.4deg, transparent 1.4deg 11deg);
-  -webkit-mask-image: radial-gradient(60% 60% at 50% 22%, #000 0%, rgba(0, 0, 0, 0.5) 34%, transparent 68%);
-  mask-image: radial-gradient(60% 60% at 50% 22%, #000 0%, rgba(0, 0, 0, 0.5) 34%, transparent 68%);
-  opacity: 0.5;
-  animation: spin 140s linear infinite;
-}
-
 .hero-inner {
   position: relative;
   z-index: 2;
@@ -457,115 +465,202 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.5rem); line-height: 1.16; }
   width: min(780px, 100%);
 }
 
-/* sun medallion (portrait) */
+/* pendant lamp ------------------------------------------------------
+   Hangs from the top of the hero. The rig swings from its ceiling anchor;
+   the beam lives inside the rig so the pool of light swings with it. */
 
-.sun-medallion {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: clamp(180px, 26vw, 250px);
-  margin: 0 auto 60px;
-  aspect-ratio: 1;
-}
-
-.sun-halo {
+.lamp {
   position: absolute;
-  inset: -46%;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--sun-glow) 0%, transparent 60%);
-  filter: blur(4px);
-  animation: breathe 7s var(--ease-soft) infinite;
-}
-
-.sun-rays {
-  position: absolute;
-  inset: -72%;
-  border-radius: 50%;
-  background: repeating-conic-gradient(from 0deg, var(--ray) 0deg 1.5deg, transparent 1.5deg 10deg);
-  -webkit-mask-image: radial-gradient(circle, transparent 30%, #000 38%, #000 58%, transparent 74%);
-  mask-image: radial-gradient(circle, transparent 30%, #000 38%, #000 58%, transparent 74%);
-  opacity: 0.55;
-  animation: spin 90s linear infinite;
-}
-
-.sun-rings {
-  position: absolute;
-  inset: -20%;
-  border-radius: 50%;
-  border: 1px dashed color-mix(in oklab, var(--accent) 48%, transparent);
-  animation: spin-rev 70s linear infinite;
-}
-.sun-rings::before {
-  position: absolute;
-  inset: 12%;
-  border-radius: 50%;
-  border: 1px dotted color-mix(in oklab, var(--accent-2) 42%, transparent);
-  content: "";
-}
-
-.sun-disc {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow:
-    0 0 0 1px var(--glass-border),
-    0 0 0 8px color-mix(in oklab, var(--paper) 55%, transparent),
-    0 24px 60px -22px var(--sun-glow);
-}
-
-.sun-face {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 22%;
-  filter: saturate(1.06) contrast(1.02);
-}
-
-.sun-disc::after {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  z-index: 3;
+  width: 200px;
+  margin-left: -100px;
   pointer-events: none;
-  content: "";
-  background:
-    radial-gradient(circle at 50% 8%, rgba(255, 224, 170, 0.4), transparent 42%),
-    radial-gradient(circle at 50% 130%, rgba(0, 0, 0, 0.42), transparent 58%);
 }
 
-.sun-orbit {
-  position: absolute;
-  inset: -20%;
-  border-radius: 50%;
-  animation: spin 26s linear infinite;
-}
-.sun-orbit::before {
-  position: absolute;
-  top: -4px;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  margin-left: -4px;
-  border-radius: 50%;
-  background: var(--accent-2);
-  box-shadow: 0 0 14px 2px var(--sun-glow);
-  content: "";
+.lamp-rig {
+  position: relative;
+  transform-origin: 50% -60px;
+  will-change: transform;
 }
 
-.sun-caption {
+.lamp-wire {
   position: absolute;
-  bottom: -40px;
+  top: -60px;
   left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
+  width: 2px;
+  height: 172px;
+  margin-left: -1px;
+  background: var(--lamp-wire);
+}
+
+.lamp-shade {
+  position: absolute;
+  top: 110px;
+  left: 0;
+  width: 200px;
+  height: 124px;
+  overflow: visible;
+  pointer-events: auto;
+  filter: drop-shadow(0 14px 18px rgba(40, 20, 6, 0.28));
+}
+/* the site-wide icon rule strokes every svg shape — the lamp is solid, so opt out */
+.lamp-shade * { stroke: none; }
+.lamp-cap, .lamp-neck { fill: var(--lamp-metal); }
+.lamp-inner { fill: var(--lamp-inner); transition: fill 0.4s var(--ease-soft); }
+.lamp-bulb { fill: var(--lamp-bulb); transition: fill 0.4s var(--ease-soft); }
+.lamp-shade .lamp-lip { fill: none; stroke: var(--lamp-shade-dark); stroke-width: 3; stroke-linecap: round; }
+
+/* the pool of light: a soft-edged cone from the bulb, faded toward the floor */
+.lamp-beam {
+  position: absolute;
+  top: 214px;
+  left: 50%;
+  width: 1500px;
+  height: 860px;
+  margin-left: -750px;
+  background: conic-gradient(
+    from 140deg at 50% 0%,
+    transparent 0deg,
+    rgba(255, 210, 130, 0.42) 12deg,
+    rgba(255, 222, 160, 0.5) 40deg,
+    rgba(255, 210, 130, 0.42) 68deg,
+    transparent 80deg,
+    transparent 360deg
+  );
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.75) 45%, transparent 92%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.75) 45%, transparent 92%);
+  mix-blend-mode: screen;
+  opacity: var(--lamp-light);
+  transition: opacity 0.5s var(--ease-soft);
+}
+
+.lamp-glow {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  width: 260px;
+  height: 260px;
+  margin-left: -130px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 226, 160, 0.95) 0%, rgba(255, 190, 100, 0.35) 30%, transparent 64%);
+  mix-blend-mode: screen;
+  opacity: var(--lamp-light);
+  transition: opacity 0.5s var(--ease-soft);
+}
+
+/* flicker as the filament catches */
+.lamp.is-igniting .lamp-beam,
+.lamp.is-igniting .lamp-glow { animation: lamp-flicker 0.55s steps(1, end) both; }
+
+/* the pull cord: a real button with a generous hit area */
+.lamp-cord {
+  position: absolute;
+  top: 212px;
+  left: 142px;
+  width: 36px;
+  height: 92px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: grab;
+  pointer-events: auto;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.lamp-cord:active { cursor: grabbing; }
+.lamp-cord:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 10px; }
+
+.lamp-cord__line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1.5px;
+  height: 62px;
+  margin-left: -0.75px;
+  background: var(--lamp-cord);
+  transform-origin: 50% 0;
+  transform: scaleY(var(--cord-stretch, 1));
+}
+.lamp-cord__bead {
+  position: absolute;
+  top: 58px;
+  left: 50%;
+  width: 14px;
+  height: 18px;
+  margin-left: -7px;
+  border-radius: 7px 7px 8px 8px;
+  background: radial-gradient(circle at 35% 30%, var(--lamp-shade-light), var(--lamp-shade-dark));
+  box-shadow: 0 4px 10px -3px rgba(40, 20, 6, 0.5);
+  transform: translateY(var(--cord-pull, 0px));
+  transition: box-shadow 0.2s var(--ease);
+}
+.lamp-cord:hover .lamp-cord__bead { box-shadow: 0 0 0 5px color-mix(in oklab, var(--accent) 22%, transparent), 0 4px 10px -3px rgba(40, 20, 6, 0.5); }
+
+.lamp-hint {
+  position: absolute;
+  top: 280px;
+  left: 184px;
   color: var(--ink-faint);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-style: italic;
+  white-space: nowrap;
+  transform: rotate(-8deg);
+  transition: opacity 0.6s var(--ease-soft);
 }
-.sun-caption i { padding: 0 8px; color: var(--accent); font-style: normal; }
+.lamp-hint::before {
+  position: absolute;
+  top: -18px;
+  left: -16px;
+  width: 22px;
+  height: 18px;
+  border-top: 1.5px solid currentColor;
+  border-left: 1.5px solid currentColor;
+  border-radius: 14px 0 0 0;
+  content: "";
+  opacity: 0.7;
+}
+.lamp.is-used .lamp-hint { opacity: 0; }
+
+/* live status line */
+
+.status-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 26px 0 0;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  color: var(--ink-soft);
+  background: var(--glass);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.status-chip svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.6; }
+.status-time { color: var(--ink); font-variant-numeric: tabular-nums; }
+.status-time:not(:empty)::before { content: "· "; color: var(--ink-faint); }
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3f9d5c;
+  box-shadow: 0 0 0 0 rgba(63, 157, 92, 0.6);
+  animation: status-ping 2.4s var(--ease-soft) infinite;
+}
 
 /* name + light sweep */
 
@@ -1137,7 +1232,42 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.5rem); line-height: 1.16; }
 
 /* ---------------------------------------------------------- contact */
 
-.contact-section { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 56px; align-items: start; }
+.contact-section {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1.1fr) minmax(0, 0.85fr);
+  gap: 48px;
+  align-items: start;
+}
+
+/* the portrait, now at the end of the page: a small print, slightly askew */
+.portrait-print {
+  margin: 6px 0 0;
+  padding: 12px 12px 14px;
+  border-radius: 6px;
+  background: var(--shot-mount);
+  box-shadow: 0 1px 0 var(--rule), var(--shadow), 0 18px 40px -26px rgba(40, 20, 6, 0.6);
+  /* rotate/translate, not transform: the reveal animation ends on transform:none */
+  rotate: -2.5deg;
+  transition: rotate 0.45s var(--ease), translate 0.45s var(--ease);
+}
+.portrait-print:hover { rotate: 0deg; translate: 0 -4px; }
+.portrait-print img {
+  display: block;
+  width: 100%;
+  height: auto;   /* without this the height="800" attribute pins the box and aspect-ratio is ignored */
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 22%;
+  border-radius: 3px;
+}
+.portrait-print figcaption {
+  margin-top: 11px;
+  color: #3a2c22;
+  font-family: var(--display);
+  font-size: 1.02rem;
+  font-style: italic;
+  text-align: center;
+}
 
 .contact-card { display: grid; gap: 0; padding: 8px 26px; }
 .contact-card > a {
@@ -1274,9 +1404,15 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.5rem); line-height: 1.16; }
 
 /* ---------------------------------------------------------- keyframes */
 
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes spin-rev { to { transform: rotate(-360deg); } }
-@keyframes breathe { 0%, 100% { transform: scale(1); opacity: 0.85; } 50% { transform: scale(1.08); opacity: 1; } }
+@keyframes lamp-flicker {
+  0% { opacity: 0; } 18% { opacity: 0.85; } 30% { opacity: 0.2; } 44% { opacity: 1; }
+  58% { opacity: 0.55; } 72% { opacity: 1; } 100% { opacity: var(--lamp-light); }
+}
+@keyframes status-ping {
+  0% { box-shadow: 0 0 0 0 rgba(63, 157, 92, 0.55); }
+  70% { box-shadow: 0 0 0 7px rgba(63, 157, 92, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(63, 157, 92, 0); }
+}
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 var(--sun-glow); } 70% { box-shadow: 0 0 0 9px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
 @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
 @keyframes marquee { to { transform: translateX(-50%); } }
@@ -1334,8 +1470,9 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.5rem); line-height: 1.16; }
 
   .project-grid { grid-template-columns: 1fr; }
   .project-card.is-wide:not(.is-text) { grid-template-columns: 1fr; gap: 26px; }
-  .two-column,
-  .contact-section { grid-template-columns: 1fr; gap: 30px; }
+  .two-column { grid-template-columns: 1fr; gap: 30px; }
+  .contact-section { grid-template-columns: 200px minmax(0, 1fr); gap: 36px; }
+  .contact-card { grid-column: 1 / -1; }
   .timeline { grid-template-columns: 1fr; }
 }
 
@@ -1346,7 +1483,12 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.5rem); line-height: 1.16; }
   .site-header { padding: 12px 16px; }
   .nav-links { left: 16px; right: 16px; }
 
-  .hero { padding: 130px 20px 96px; }
+  .hero { padding: 262px 20px 96px; }
+  .lamp { transform: scale(0.8); transform-origin: 50% 0; }
+  .lamp-hint { display: none; }
+
+  .contact-section { grid-template-columns: 1fr; }
+  .portrait-print { justify-self: center; width: min(220px, 70vw); }
 
   .hero-stats { grid-template-columns: 1fr; margin-top: 46px; }
   .hero-actions { flex-direction: column; align-items: stretch; }
@@ -1375,11 +1517,11 @@ h3 { font-size: clamp(1.25rem, 2.1vw, 1.5rem); line-height: 1.16; }
   .js [data-reveal] { opacity: 1; transform: none; }
   .js [data-split] .w > .wi { opacity: 1; transform: none; }
   .hero-name { background-position: 0% 0; }
-  .god-rays, .sun-rays, .sun-rings, .sun-orbit, .aurora-orb, .pulse, .pulse-dot { animation: none !important; }
+  .aurora-orb, .pulse, .pulse-dot, .status-dot, .lamp-beam, .lamp-glow { animation: none !important; }
   .pointer-light { display: none; }
 }
 
 @media print {
-  .site-header, .filter-bar, .hero-actions, .lightbox, .scroll-cue, .ribbon, .marquee, .grain, .scroll-progress, .aurora, .pointer-light, .god-rays { display: none !important; }
+  .site-header, .filter-bar, .hero-actions, .lightbox, .scroll-cue, .ribbon, .marquee, .grain, .scroll-progress, .aurora, .pointer-light, .lamp { display: none !important; }
   .project-card, .glass, .hero-stats > div { box-shadow: none; background: none; }
 }

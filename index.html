@@ -81,26 +81,39 @@
     <main id="main">
       <!-- ============================ HERO ============================ -->
       <section class="hero" id="top">
-        <div class="hero-sky" aria-hidden="true">
-          <span class="god-rays"></span>
+        <div class="hero-sky" aria-hidden="true"></div>
+
+        <!-- Pendant lamp. Pulling the cord switches between day and dusk. -->
+        <div class="lamp" id="lamp">
+          <div class="lamp-rig" id="lampRig">
+            <span class="lamp-wire" aria-hidden="true"></span>
+            <span class="lamp-beam" aria-hidden="true"></span>
+            <span class="lamp-glow" aria-hidden="true"></span>
+            <svg class="lamp-shade" viewBox="0 0 200 124" aria-hidden="true">
+              <defs>
+                <linearGradient id="shadeFill" x1="0" x2="1" y1="0" y2="0">
+                  <stop offset="0" stop-color="var(--lamp-shade-dark)"/>
+                  <stop offset="0.42" stop-color="var(--lamp-shade)"/>
+                  <stop offset="0.58" stop-color="var(--lamp-shade-light)"/>
+                  <stop offset="1" stop-color="var(--lamp-shade-dark)"/>
+                </linearGradient>
+              </defs>
+              <rect class="lamp-cap" x="90" y="0" width="20" height="16" rx="4"/>
+              <rect class="lamp-neck" x="95" y="14" width="10" height="12" rx="2"/>
+              <path class="lamp-bowl" d="M100 24C62 24 28 58 16 104h168C172 58 138 24 100 24Z" fill="url(#shadeFill)"/>
+              <ellipse class="lamp-inner" cx="100" cy="104" rx="84" ry="9"/>
+              <path class="lamp-lip" d="M16 104c4 6 164 6 168 0"/>
+              <circle class="lamp-bulb" cx="100" cy="106" r="14"/>
+            </svg>
+            <button class="lamp-cord" id="lampCord" type="button" aria-pressed="false" aria-label="Pull the lamp cord to switch to the night theme">
+              <span class="lamp-cord__line" aria-hidden="true"></span>
+              <span class="lamp-cord__bead" aria-hidden="true"></span>
+            </button>
+            <span class="lamp-hint" aria-hidden="true">pull</span>
+          </div>
         </div>
 
         <div class="hero-inner">
-          <figure class="sun-medallion" data-tilt-soft>
-            <span class="sun-rays" aria-hidden="true"></span>
-            <span class="sun-rings" aria-hidden="true"></span>
-            <span class="sun-halo" aria-hidden="true"></span>
-            <span class="sun-disc">
-              <img
-                class="sun-face"
-                src="assets/lovepreet-portrait.webp"
-                alt="Portrait of Lovepreet Sharma"
-                width="640" height="800" fetchpriority="high" decoding="async"
-              >
-            </span>
-            <span class="sun-orbit" aria-hidden="true"></span>
-            <figcaption class="sun-caption">Lovepreet Sharma <i>/</i> AI/ML engineer</figcaption>
-          </figure>
 
           <p class="eyebrow"><span class="pulse-dot"></span> M.Tech Data Analytics &middot; NIT Jalandhar</p>
 
@@ -122,6 +135,10 @@
             </a>
             <a class="button secondary" href="#contact">Get in touch</a>
           </div>
+          <p class="status-line" aria-label="Status">
+            <span class="status-chip status-chip--open"><span class="status-dot" aria-hidden="true"></span>Open to AI/ML, SDE &amp; full-stack roles</span>
+            <span class="status-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>Jalandhar, India <time id="localTime" class="status-time"></time></span>
+          </p>
 
           <dl class="hero-stats" data-reveal-group>
             <div data-reveal>
@@ -971,7 +988,15 @@
 
       <!-- ============================ CONTACT ============================ -->
       <section id="contact" class="section-shell contact-section">
-        <div data-reveal>
+        <figure class="portrait-print" data-reveal>
+          <img
+            src="assets/lovepreet-portrait.webp"
+            alt="Portrait of Lovepreet Sharma"
+            width="640" height="800" loading="lazy" decoding="async"
+          >
+          <figcaption>That&rsquo;s me. Say hello.</figcaption>
+        </figure>
+        <div class="contact-copy" data-reveal>
           <p class="section-kicker">Contact</p>
           <h2 data-split="words">Open to AI/ML, software engineering and full-stack roles.</h2>
           <p class="section-text">
